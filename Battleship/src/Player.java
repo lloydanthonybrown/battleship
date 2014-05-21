@@ -25,6 +25,7 @@ private double averagewins;
    private int highScore; 
    private double averagewins; 
    
+   
    public PlayerComp(){
        name = "Admiral";
               
@@ -105,4 +106,5 @@ private double averagewins;
        
    }    
    
+}
 }
