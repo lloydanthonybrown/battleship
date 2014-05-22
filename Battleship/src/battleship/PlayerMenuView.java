@@ -57,7 +57,7 @@ public class PlayerMenuView {
                 case "Q":
                     break;
                 default:
-                    new Battleship().displayError("Invalid command. Please enter a valid command.");
+                    this.playerMenuControl.displayError();
                     continue;
             }
         } while (!command.equals("Q"));

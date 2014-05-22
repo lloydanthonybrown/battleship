@@ -45,6 +45,13 @@ public class PlayerMenuControl {
         displayHelpBorder();
     }
     
+    public void displayError() {
+        System.out.println();
+        this.displayHelpBorder();
+        System.out.println("\tInvalid command. Please enter a valid command.");
+        displayHelpBorder();
+    }
+    
     public void displayHelpBorder() {
         System.out.println(
         "\t*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
