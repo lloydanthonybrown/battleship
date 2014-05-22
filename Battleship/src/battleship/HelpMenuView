@@ -1,4 +1,5 @@
 package battleship;
+import java.util.Scanner;
 public class HelpMenuView {
      private final static String[][] menuItems = {
         {"B", "The grid"},
