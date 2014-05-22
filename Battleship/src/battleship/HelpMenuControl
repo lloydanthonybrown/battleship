@@ -1,0 +1,84 @@
+package battleship;
+
+/**
+ *
+ * @author ckcarroll
+ */
+public class HelpMenuControl {
+      public HelpMenuControl() {
+        
+    } 
+
+    public void displayBoardHelp() {
+        System.out.println();
+        this.displayHelpBorder();             
+        System.out.println( 
+                "\tBattleship has a grid of 30x30 "
+                + "\n\tYou will guess the position of your opponents ship by  "
+                + "\n\tclicking on one square on the grid. "
+                + "\n\t3 УДАЧИ!");
+        displayHelpBorder();
+    }
+    
+    
+        
+    public void displayGameHelp() {
+        System.out.println();
+        displayHelpBorder();     
+        System.out.println( 
+                 "\t The objective is to sink your opponents battleship before "
+                + "\n\tthey lay waste to your fleet. "
+                + "\n\t ОГОНЬ! "
+                + "\n\t"
+                ); 
+        displayHelpBorder();
+    }
+            
+    public void displayRealPlayerHelp() {
+        System.out.println();
+        displayHelpBorder();     
+        System.out.println( 
+                "\tA real player manually guesses the ship's position by cliking "
+                + "\n\t in the desired area."
+                ); 
+        displayHelpBorder();
+    }
+    
+                   
+    public void displayComputerPlayerHelp() {
+        System.out.println();
+        displayHelpBorder();     
+        System.out.println( 
+                "\tA computer based player automatically takes its turn "
+                + "\n\timmediatly after a real player in a single player game."
+                ); 
+        displayHelpBorder();
+    }
+             
+    public void displayLocationHelp() {
+        System.out.println();
+        displayHelpBorder();     
+        System.out.println( 
+               "\tA location on the board where a player can place their marker"
+                ); 
+        displayHelpBorder();
+    }
+                 
+    public void displayMarkerHelp() {
+        System.out.println();
+        displayHelpBorder();     
+        System.out.println( 
+               "\tA symbol that \"marks\" the locations in the board that are occupied "
+                + "by a player. "
+                + "\n\tThe default markers are \"X\" and \"O\"."
+                ); 
+        displayHelpBorder();
+    }
+    
+    
+    public void displayHelpBorder() {       
+        System.out.println(
+        "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
+    
+}
