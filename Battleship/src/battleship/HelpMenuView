@@ -1,3 +1,4 @@
+package battleship;
 public class HelpMenuView {
      private final static String[][] menuItems = {
         {"B", "The grid"},
