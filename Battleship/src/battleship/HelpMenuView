@@ -1,25 +1,31 @@
 package battleship;
+
 import java.util.Scanner;
+
+/**
+ *
+ * @author ckcarroll
+ */
 public class HelpMenuView {
      private final static String[][] menuItems = {
-        {"B", "The grid"},
-        {"C", "A computer player"}, 
-        {"G", "Играй Battleship"},
-        {"L", "A location"},
-        {"M", "A marker"},
-        {"R", "A regular player"},        
+        {"G", "The Grid"},
+        {"C", "Computer player"}, 
+        {"P", "О Игре 'Battleship'"},
+        {"L", "Locations"},
+        {"M", "Markers"},
+        {"PP", "People players"},        
         {"Q", "Quit Help"}        
     };
     
-    // Create instance of the HelpMenuControl (action) class
+   
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
     
-    // default constructor
+
     public HelpMenuView() {
         
     } 
     
-    // display the help menu and get the end users input selection
+
     public void getInput() {       
               
         String command;
@@ -27,20 +33,20 @@ public class HelpMenuView {
         
         do {
             
-            this.display(); // display the menu
+            this.display(); 
             
-            // get commaned entered
+           
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
+                case "G":
+                    this.helpMenuControl.displayGridHelp();
                     break;
                 case "C":
                     this.helpMenuControl.displayComputerPlayerHelp();
                     break;
-                case "G":
+                case "P":
                     this.helpMenuControl.displayGameHelp();
                     break;                  
                 case "L":
@@ -49,7 +55,7 @@ public class HelpMenuView {
                 case "M":
                     this.helpMenuControl.displayMarkerHelp();
                     break;
-                 case "R":
+                 case "PP":
                     this.helpMenuControl.displayRealPlayerHelp();
                     break; 
                 case "Q": 
@@ -63,7 +69,7 @@ public class HelpMenuView {
          return;
     }
 
-        // displays the help menu
+    /*    // displays the help menu
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -72,9 +78,6 @@ public class HelpMenuView {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
-    }
+    }*/
   
 }
-    
-    
-
