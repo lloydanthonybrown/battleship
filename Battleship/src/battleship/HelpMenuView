@@ -18,7 +18,7 @@ public class HelpMenuView {
     };
     
    
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private final HelpMenuControl helpMenuControl = new HelpMenuControl();
     
 
     public HelpMenuView() {
@@ -62,11 +62,11 @@ public class HelpMenuView {
                     break;
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
+                    
             }
         } while (!command.equals("Q"));  
         
-         return;
+       
     }
 
     /*    // displays the help menu
