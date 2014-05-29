@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author ckcarroll
  */
-public class MainMenuView2 {
+public class MainMenuView {
      private final static String[][] menuItems = {
         {"C", "Control"},
         {"V", "View"}, 

@@ -1,8 +1,8 @@
 package battleship;
 
 
-public class HelpMenuControl2 {
-      public HelpMenuControl2() {
+public class HelpMenuControl {
+      public HelpMenuControl() {
         
     } 
 

@@ -4,8 +4,8 @@ package battleship;
  *
  * @author ckcarroll
  */
-public class MainMenuControl2 {
-    public MainMenuControl2(){
+public class MainMenuControl {
+    public MainMenuControl(){
         
     }
     

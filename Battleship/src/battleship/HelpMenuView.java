@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * @author ckcarroll
  */
-public class HelpMenuView2 {
+public class HelpMenuView {
      private final static String[][] menuItems = {
         {"G", "The Grid"},
         {"C", "Computer player"}, 
@@ -18,10 +18,10 @@ public class HelpMenuView2 {
     };
     
    
-    private final HelpMenuControl2 helpMenuControl = new HelpMenuControl2();
+    private final HelpMenuControl helpMenuControl = new HelpMenuControl();
     
 
-    public HelpMenuView2() {
+    public HelpMenuView() {
         
     } 
     
