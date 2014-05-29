@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Grid {
     public int width = 30;
     public int height = width;
-    private double gridSize = width * height;
-    private int guesses; 
+    public double gridSize = width * height;
+    public int guesses; 
     /* This is a crappy way of doing it, I know. It would be better to have
     * calculated the number of ships first, and how big those ships are, and 
     * then used that as the upper boundary for how many hits could be achieved.

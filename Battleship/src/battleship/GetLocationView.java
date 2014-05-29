@@ -95,13 +95,14 @@ public class GetLocationView {
             // create a Point object to store the row and column coordinates in
             location = new Point(row-1, column-1);
             
+/*
             // check to see if the location entered is already occupied
             if ( board.boardLocations[row-1][column-1].player != null ) {
                 new BattleshipError().displayError(
                     "The current location is taken. Select another location");
                 continue;
             }
-
+*/
             valid = true; // a valid location was entered
 
         }
