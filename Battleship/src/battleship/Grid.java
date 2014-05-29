@@ -4,8 +4,8 @@ import java.util.Scanner;
 */
 
 public class Grid {
-    private int width = 10;
-    private int height = width;
+    public int width = 30;
+    public int height = width;
     private double gridSize = width * height;
     private int guesses; 
     /* This is a crappy way of doing it, I know. It would be better to have
@@ -31,6 +31,9 @@ public class Grid {
         System.out.println(height);
     }
 
+    public Grid(){
+        
+    }
     public Grid(int guesses, int numberOfHits, int numberOfHitsPossible) {
         this.guesses = guesses;
         this.numberOfHits = numberOfHits;
