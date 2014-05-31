@@ -34,6 +34,7 @@ public class Battleship {
         GetWinningPercentage(wins, losses);
         Player plays[] = new Player[2];
         Grid.getPercentageOfGameComplete();
+        
     }
 
     public Battleship() {
