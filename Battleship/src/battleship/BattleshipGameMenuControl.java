@@ -16,6 +16,7 @@ public class BattleshipGameMenuControl {
         // Location[][] locations = this.board.boardLocations;
 
         // for every row in the table
+        count = 0;
         for (int row = 0; row < locations.length; row++) {
             
             // get the list of locations (columns) in the row
@@ -25,9 +26,15 @@ public class BattleshipGameMenuControl {
             for (int col = 0; col < rowLocations.length; col++) {
                 
                 // three of the same players markers in a row?
-                if (threeInARow(row, col, locations)) { 
-                    return true; // three in a row found (a winner)
+                if (shipSunk(row, col, locations)) { 
+                    System.out.println("You have sunk an enemy ship!");
+                    return true;
+                    count++;
                 }
+            }
+            
+            if (count = 5) {
+                System.out.println("All enemy ships are down. You are the winner!");
             }
         }
 }
