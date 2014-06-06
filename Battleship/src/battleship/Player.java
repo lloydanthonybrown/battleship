@@ -115,23 +115,25 @@ private double averagewins;
    
     public static void SortScores ( int[] moves )
 {
-     int i, m, first, temp;  
-     for ( i = 0; i < moves.length - 1; i++ )  
-     {
-          first = 0;   //initialize to subscript of first element
-          for(m = 1; m < moves.length - 1; m++)   //locate smallest element between positions 1 and i.
-          {
-               if( moves[m] < moves[first] )         
-                 first = m;
-          }
-          temp = moves[first];   //swap smallest found with element in position i.
-          moves[first] = moves[i];
-          moves[i] = temp;
-      }
-    
-    for(int x : moves){
-        System.out.print(x + " ");
-    }
+     int i, m, first, temp;
+        
+        for(i = moves.length - 1; i > 0; i--) {
+            first = 0;
+            for(m = 1; m <= i; m++) {
+                if (moves[m] > moves[first])
+                    first = m;
+            }
+             temp = moves[ first ];   //swap smallest found with element in position i.
+            moves[ first ] = moves[ i ];
+            moves[ i ] = temp;
+                
+            
+            }
+        System.out.print("Sorted array is:");
+        int a;    
+        for (a = 0; a< moves.length; a++)
+                System.out.print(" " + moves[a]);
+            System.out.println();
 }
     
 }
