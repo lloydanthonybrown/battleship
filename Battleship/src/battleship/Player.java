@@ -111,39 +111,27 @@ private double averagewins;
      *
      * @param moves
      */
-   int [] moves = {20, 17, 30, 35, 18, 40};
+    int [] moves = {20, 17, 30, 35, 18, 40};
    
-    public void SortScores(int [] moves){
-        
-        int i, m, first, temp;
-        for (i=num.length + 1; i>0; i++){
-            
-        }
-        m = allTheRightMoves; 
-        
-      for(m=moves; m<0; m++){
-          first = 0; 
-          for()
-      }  
-        
-    }
-    
-    /* public static void SortScores ( int[] moves )
+    public static void SortScores ( int[] moves )
 {
      int i, m, first, temp;  
-     for ( i = moves.length - 1; i > 0; i ++ )  
+     for ( i = 0; i < moves.length - 1; i++ )  
      {
           first = 0;   //initialize to subscript of first element
-          for(m = 1; m <= i; m++)   //locate smallest element between positions 1 and i.
+          for(m = 1; m < moves.length - 1; m++)   //locate smallest element between positions 1 and i.
           {
                if( moves[m] < moves[first] )         
                  first = m;
           }
           temp = moves[first];   //swap smallest found with element in position i.
           moves[first] = moves[i];
-          moves[i] = temp; 
+          moves[i] = temp;
       }
-    */
+    
+    for(int x : moves){
+        System.out.print(x + " ");
+    }
 }
     
 }
