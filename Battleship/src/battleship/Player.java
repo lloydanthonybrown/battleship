@@ -135,5 +135,14 @@ private double averagewins;
                 System.out.print(" " + moves[a]);
             System.out.println();
 }
+ 
     
+    public static void AverageMoves(int [] moves) {
+        int sum = 0;
+        int average;
+        for (int x : moves)
+            sum += x;
+        average = sum / moves.length;
+        System.out.println("You average score is " + average);
+    }
 }
