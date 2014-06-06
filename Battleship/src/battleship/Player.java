@@ -107,4 +107,20 @@ private double averagewins;
    }    
    
 }
+ /**
+     *
+     * @param moves
+     */
+    public void SortScores(int [] moves){
+        
+        int m, first, temp;
+        int scores[] = new scores[m];
+        m = allTheRightMoves; 
+        
+      for(m=moves; m<0; m++){
+          first = 0; 
+          for()
+      }  
+        
+    }
 }
