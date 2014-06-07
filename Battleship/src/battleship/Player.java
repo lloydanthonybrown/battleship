@@ -145,6 +145,7 @@ private double averagewins;
     }
     
     // Still working on this part. Bear with me. -Lloyd
+    // Yay, I think it's working now!! :D
     public static void MaxScore(int[] moves) {
         int max = 0;
         for (int i : moves){
