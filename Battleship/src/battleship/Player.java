@@ -126,7 +126,6 @@ private double averagewins;
              temp = moves[ first ];   //swap smallest found with element in position i.
             moves[ first ] = moves[ i ];
             moves[ i ] = temp;
-                
             
             }
         System.out.print("Sorted array is:");
@@ -135,7 +134,6 @@ private double averagewins;
                 System.out.print(" " + moves[a]);
             System.out.println();
 }
- 
     
     public static void AverageMoves(int [] moves) {
         int sum = 0;
