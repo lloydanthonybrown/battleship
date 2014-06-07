@@ -145,4 +145,23 @@ private double averagewins;
         average = sum / moves.length;
         System.out.println("You average score is " + average);
     }
+    
+    // Still working on this part. Bear with me. -Lloyd
+    public static void MaxScore(int[] moves) {
+        int max = 0;
+        for (int i : moves){
+            if (moves[i] > max)
+                max = moves[i];
+                }
+        System.out.println("Your max score is " + max);
+        
+        // This was what I had to start, but that was before I used the for-each.
+        // Probably don't need this section any more :( 
+        /* for ( i = 0; i <= moves.length; i++){
+            max = moves[i];
+            if (moves[i] > max){
+                max = moves[i];
+            }
+        } */
+    }
 }
