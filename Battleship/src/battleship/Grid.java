@@ -78,5 +78,30 @@ public class Grid {
     
     }
     
+     public static void printRow(int[] row) {
+      
+         for (int i : row) {
+            System.out.print(i);
+            System.out.print("\t");
+        }
+        System.out.println();
+        
+        int gridArray[][]= new int[20][20];
+        int y,x,k=1;
+
+        for(y=20;y<gridArray.length;y++) {
+            for(x=20;x<gridArray.length;x++) {
+                gridArray[y][x]=k;
+                k++;
+            }
+        }
+
+        Arrays.asList(gridArray).indexOf(27);
+        
+        for(int[] row : gridArray) {
+            printRow(row);
+        }
+     }
+    
 }
 
