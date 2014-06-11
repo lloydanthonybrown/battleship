@@ -6,20 +6,18 @@ import java.util.Scanner;
 public class OptionsMenuView {
     
      private final static String[][] menuItems = {
-        {"G", "The Grid"},
-        {"C", "Computer player"}, 
-        {"P", "О Игре 'Battleship'"},
-        {"L", "Locations"},
-        {"M", "Markers"},
-        {"PP", "People players"},        
+        {"D", "Difficulty"},
+        {"N", "Number of Players"}, 
+        {"P", "Player Options'"},
+        {"S", "Statistics"},
         {"Q", "Quit Help"}        
     };
     
    
-    private final HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private final OptionsMenuControl optionsMenuControl = new OptionsMenuControl();
     
 
-    public HelpMenuView() {
+    public OptionsMenuView() {
         
     } 
     
@@ -38,44 +36,39 @@ public class OptionsMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "G":
-                    this.helpMenuControl.displayGridHelp();
+                case "D":
+                    this.optionsMenuControl.changeDifficulty();
                     break;
-                case "C":
-                    this.helpMenuControl.displayComputerPlayerHelp();
+                case "N":
+                    this.optionsMenuControl.numberOfPlayers();
                     break;
                 case "P":
-                    this.helpMenuControl.displayGameHelp();
+                    this.optionsMenuControl.playerOptions();
                     break;                  
-                case "L":
-                    this.helpMenuControl.displayLocationHelp();
+                case "S":
+                    this.optionsMenuControl.playerStatistics();
                     break;
-                case "M":
-                    this.helpMenuControl.displayMarkerHelp();
-                    break;
-                 case "PP":
-                    this.helpMenuControl.displayRealPlayerHelp();
-                    break; 
-                case "Q": 
+                case "Q":
                     break;
                 default: 
-                    new BattleshipError().displayError("Invalid command. Please enter a valid command.");
-                    
+                    this.optionsMenuControl.displayError();
+                    continue;
+                                        
             }
         } while (!command.equals("Q"));  
         
-       
+       return;
     }
 
-    /*    // displays the help menu
+        // displays the options menu
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
+        for (int i = 0; i < OptionsMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
-    }*/
+    }
   
 }
