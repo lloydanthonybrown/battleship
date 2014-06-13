@@ -12,26 +12,18 @@ public class OptionsMenuView {
         {"S", "Statistics"},
         {"Q", "Quit Help"}        
     };
-    
    
     private final OptionsMenuControl optionsMenuControl = new OptionsMenuControl();
-    
 
     public OptionsMenuView() {
-        
     } 
-    
 
     public void getInput() {       
-              
         String command;
         Scanner inFile = new Scanner(System.in);
         
         do {
-            
             this.display(); 
-            
-           
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
@@ -56,7 +48,6 @@ public class OptionsMenuView {
                                         
             }
         } while (!command.equals("Q"));  
-        
        return;
     }
 
@@ -70,5 +61,4 @@ public class OptionsMenuView {
         }
         System.out.println("\t===============================================================\n");
     }
-  
 }
