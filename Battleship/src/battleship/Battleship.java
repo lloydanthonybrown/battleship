@@ -26,14 +26,15 @@ public class Battleship {
         Battleship myGame = new Battleship();
         myGame.getName();
         myGame.displayHelp();
+        myGame.MainMenuView.getInput();
         
        //call function from UserHelp
-        int wins = 8;
+        /* int wins = 8;
         int losses = 1;
         UserHelp.getLosingPercentage(wins, losses);
         GetWinningPercentage(wins, losses);
         Player plays[] = new Player[2];
-        Grid.getPercentageOfGameComplete();
+        Grid.getPercentageOfGameComplete(); */
         
     }
 
