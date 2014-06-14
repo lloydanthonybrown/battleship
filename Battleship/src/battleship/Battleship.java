@@ -27,14 +27,16 @@ public class Battleship {
         myGame.getName();
         myGame.displayHelp();
         
-       //call function from UserHelp
+       /*call function from UserHelp
         int wins = 8;
         int losses = 1;
         UserHelp.getLosingPercentage(wins, losses);
         GetWinningPercentage(wins, losses);
         Player plays[] = new Player[2];
-        Grid.getPercentageOfGameComplete();
+        Grid.getPercentageOfGameComplete();*/
         
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
     }
 
     public Battleship() {
@@ -44,7 +46,7 @@ public class Battleship {
         this.name = name;
     }
         
-public static double GetWinningPercentage(int wins, int losses){
+/*public static double GetWinningPercentage(int wins, int losses){
 	if (wins < 0) {
 		System.out.println("Invalid number of wins");  
 		return -1;}
@@ -61,6 +63,6 @@ public static double GetWinningPercentage(int wins, int losses){
 	double winLossRatio = (wins / totalScore) * 100;
 	
 	return winLossRatio;
-}
+}*/
 
 }
