@@ -26,7 +26,8 @@ public class Battleship {
         Battleship myGame = new Battleship();
         myGame.getName();
         myGame.displayHelp();
-        myGame.MainMenuView.getInput();
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
         
        //call function from UserHelp
         /* int wins = 8;
