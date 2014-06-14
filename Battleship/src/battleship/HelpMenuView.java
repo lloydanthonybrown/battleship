@@ -8,9 +8,9 @@ import java.util.Scanner;
  */
 public class HelpMenuView {
      private final static String[][] menuItems = {
-        {"G", "The Grid"},
+        {"G", "Instructions"},
         {"C", "Computer player"}, 
-        {"P", "О Игре 'Battleship'"},
+        {"P", "Battleship Objectives"},
         {"L", "Locations"},
         {"M", "Markers"},
         {"PP", "People players"},        
@@ -41,13 +41,13 @@ public class HelpMenuView {
             
             switch (command) {
                 case "G":
-                    this.helpMenuControl.displayGridHelp();
+                    this.helpMenuControl.displayInsHelp();
                     break;
                 case "C":
                     this.helpMenuControl.displayComputerPlayerHelp();
                     break;
                 case "P":
-                    this.helpMenuControl.displayGameHelp();
+                    this.helpMenuControl.displayObHelp();
                     break;                  
                 case "L":
                     this.helpMenuControl.displayLocationHelp();
@@ -69,7 +69,7 @@ public class HelpMenuView {
        
     }
 
-    /*    // displays the help menu
+    // displays the help menu
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -78,6 +78,6 @@ public class HelpMenuView {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
-    }*/
+    }
   
 }

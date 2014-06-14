@@ -22,10 +22,12 @@ public class BoardView {
         
         //not sure what this error is, I tried it in a separate project and it
         //worked just fine without errors
-        for (i = 0; i <10; i++) {
+        
+        public void displayGameboard() {
+            for (i = 0; i <10; i++) {
             for (j = 0; j < 10; j++)
                 System.out.print(gameboard[i][j] + ", ");
-            System.out.println();
+            System.out.println();}
         }
         
             

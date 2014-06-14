@@ -3,7 +3,7 @@ package battleship;
 /* @author lloydab
  */
 public class BattleshipGameMenuControl {
-    private boolean isWinner() {
+    /*private boolean isWinner() {
 
         // Location[][] locations = this.board.boardLocations;
 
@@ -52,5 +52,5 @@ public class BattleshipGameMenuControl {
             System.out.println("Carrier Sunk. Seriously, dude?");
         }
         
-    }
+    }*/
 }

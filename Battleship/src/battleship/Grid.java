@@ -48,7 +48,7 @@ public class Grid {
 //        public gridSize() {
 //        }
 //    }
-    public static double getPercentageOfGameComplete(){
+    /*public static double getPercentageOfGameComplete(){
         Grid grid1 = new Grid(10, 4, 17);
         
         if (size < 0)  {
@@ -76,7 +76,7 @@ public class Grid {
         if (percentageGuessed = 0){
             return 0;}
     
-    }
+    }*/
     
      public static void printRow(int[] row) {
       
@@ -96,11 +96,11 @@ public class Grid {
             }
         }
 
-        Arrays.asList(gridArray).indexOf(27);
+        /*Arrays.asList(gridArray).indexOf(27);
         
         for(int[] row : gridArray) {
             printRow(row);
-        }
+        }*/
      }
     
 }
