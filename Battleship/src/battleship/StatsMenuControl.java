@@ -5,12 +5,15 @@
  */
 
 package battleship;
+import java.io.Serializable;
 
 /**
  *
  * @author rubengonzalezflores
  */
-public class StatsMenuControl {
+public class StatsMenuControl implements Serializable {
+    
+    //default constructor
     public StatsMenuControl() {
     
     }

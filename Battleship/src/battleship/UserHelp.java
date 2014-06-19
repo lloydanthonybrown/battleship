@@ -1,9 +1,16 @@
 package battleship;
+import java.io.Serializable;
+
 //Authors: KamiAnn Dastrup, Ruben Gonzalez, Lloyd Brown, Chris Carroll
-public class UserHelp {
+public class UserHelp implements Serializable {
     String rules;
     
-    public static double getLosingPercentage(int wins, int losses) {
+    private static int wins;
+    private static int losses;
+    private static double totalGames;
+    private static double losingPercentage;
+    
+    public static double getLosingPercentage() {
        
         //check for valid values
         if (wins < 0)  {
@@ -14,10 +21,10 @@ public class UserHelp {
             return -1;}
         
         //find total number of games
-        double totalGames = wins + losses;
+        totalGames = wins + losses;
         
         //find losing percentage
-        double losingPercentage = losses / totalGames;
+        losingPercentage = losses / totalGames;
         
         //display help prompt or losing percentage
         if (totalGames >= 5 && losingPercentage >= 0.75) 
@@ -28,6 +35,43 @@ public class UserHelp {
         return losingPercentage;
     
         } 
+
+    public UserHelp() {
+    }
+
+    public String getRules() {
+        return rules;
+    }
+
+    public void setRules(String rules) {
+        this.rules = rules;
+    }
+
+    public static int getWins() {
+        return wins;
+    }
+
+    public static void setWins(int wins) {
+        UserHelp.wins = wins;
+    }
+
+    public static int getLosses() {
+        return losses;
+    }
+
+    public static void setLosses(int losses) {
+        UserHelp.losses = losses;
+    }
+
+    public static double getTotalGames() {
+        return totalGames;
+    }
+
+    public static void setTotalGames(double totalGames) {
+        UserHelp.totalGames = totalGames;
+    }
+    
+    
         
     }
 
