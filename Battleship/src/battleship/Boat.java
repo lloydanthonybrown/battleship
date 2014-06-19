@@ -2,7 +2,7 @@ package battleship;
 import java.io.Serializable;
 
 public class Boat implements Serializable{
-    int hitcheck;
+    private int hitcheck;
     //added by ckcarroll
     
    public Boat(){

@@ -5,9 +5,9 @@ import java.io.Serializable;
  */
 
 public class BattleshipLocation implements Serializable{
-    public int row;
-    public int column;
-    public Player player;
+    private int row;
+    private int column;
+    private Player player;
 
     BattleshipLocation() {
     }

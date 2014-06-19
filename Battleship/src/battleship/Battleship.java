@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
     
-    String name;
-    String instructions = "The game of Battleship \n\n"
+    private String name;
+    private String instructions = "The game of Battleship \n\n"
             + "You will have the choice of playing against another person\n"
             + "or against a computer. The object of the game is to guess\n"
             + "where the opponent's ships are located. They can be\n" 
