@@ -59,5 +59,5 @@ public class BattleshipGameMenuControl implements Serializable{
         
     }*/
     
-    
+    // Getters and Setters not available for this class yet.
 }

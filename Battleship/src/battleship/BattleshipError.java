@@ -17,5 +17,5 @@ public class BattleshipError implements Serializable{
     public BattleshipError() {
     }
     
-    
+    // Getters and Setters not available for this class yet.
 }

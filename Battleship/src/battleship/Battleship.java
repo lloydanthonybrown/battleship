@@ -51,23 +51,39 @@ public class Battleship implements Serializable{
     }
         
 /*public static double GetWinningPercentage(int wins, int losses){
-	if (wins < 0) {
-		System.out.println("Invalid number of wins");  
-		return -1;}
+    if (wins < 0) {
+    System.out.println("Invalid number of wins");
+    return -1;}
+    if (losses < 0) {
+    System.out.println("Invalid number of losses");
+    return -1;}
+    double totalScore = wins + losses;
+    if (totalScore ==  0) {
+    return 0;}
+    double winLossRatio = (wins / totalScore) * 100;
+    return winLossRatio;
+    }*/
+    
+    //****************************
+    // I don't know if this should be replacing the other getName() above or not.
+    /* public String getName() {
+        return name;
+    } */
+    //****************************
+    
+    // The remaining getters and setters for this Battleship.java class.
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	if (losses < 0) {
-		System.out.println("Invalid number of losses");
-		return -1;}
+    public String getInstructions() {
+        return instructions;
+    }
 
-        double totalScore = wins + losses;
-        
-	if (totalScore ==  0) {
-    		return 0;}
-        
-	double winLossRatio = (wins / totalScore) * 100;
-	
-	return winLossRatio;
-}*/
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
 
+    
     
 }

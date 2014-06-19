@@ -28,11 +28,38 @@ public class BoardView implements Serializable{
             System.out.println();}
         }
 
+    // Default constructor for the BoardView.java class    
     public BoardView() {
     }
 
+    // Constructor for the BoardView.java class, but I don't know if it is necessary.
     public BoardView(int i, int j) {
         this.i = i;
+        this.j = j;
+    }
+
+    // Getters and setters for the BoardView.java class. 
+    public int[][] getGameboard() {
+        return gameboard;
+    }
+
+    public void setGameboard(int[][] gameboard) {
+        this.gameboard = gameboard;
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
+
+    public int getJ() {
+        return j;
+    }
+
+    public void setJ(int j) {
         this.j = j;
     }
         

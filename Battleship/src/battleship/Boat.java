@@ -4,7 +4,8 @@ import java.io.Serializable;
 public class Boat implements Serializable{
     private int hitcheck;
     //added by ckcarroll
-    
+   
+   // Default constructor for the Boat.java class 
    public Boat(){
    }
     
@@ -44,6 +45,63 @@ public class Boat implements Serializable{
         
         
      return hitcheck;
+    }
+
+    // Getters and setters for the Boat.java class.
+    public int getHitcheck() {
+        return hitcheck;
+    }
+
+    public void setHitcheck(int hitcheck) {
+        this.hitcheck = hitcheck;
+    }
+
+    public int[] getRowBoat() {
+        return rowBoat;
+    }
+
+    public void setRowBoat(int[] rowBoat) {
+        this.rowBoat = rowBoat;
+    }
+
+    public int[] getSloop() {
+        return Sloop;
+    }
+
+    public void setSloop(int[] Sloop) {
+        this.Sloop = Sloop;
+    }
+
+    public int[] getDestroyer() {
+        return Destroyer;
+    }
+
+    public void setDestroyer(int[] Destroyer) {
+        this.Destroyer = Destroyer;
+    }
+
+    public int[] getCarrier() {
+        return Carrier;
+    }
+
+    public void setCarrier(int[] Carrier) {
+        this.Carrier = Carrier;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
     }
     
     
