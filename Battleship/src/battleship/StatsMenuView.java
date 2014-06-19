@@ -6,11 +6,12 @@
 
 package battleship;
 import java.util.Scanner;
+import java.io.Serializable;
 /**
  *
  * @author rubengonzalezflores
  */
-public class StatsMenuView {
+public class StatsMenuView implements Serializable{
     private final static String[][] menuItems = {
         {"T", "Total Games Played"},
         {"W", "Total Games won"},
@@ -65,7 +66,7 @@ public class StatsMenuView {
     
     //displays Stats menu
     public final void display() {
-        System.out.println("\tEnter the letter or number assocaiated with one of the following commands:");
+        System.out.println("\tEnter the letter or number associated with one of the following commands:");
         
         for (int i = 0; i < StatsMenuView.menuItems.length; i++) {
             System.out.println("\t " + menuItems[i][0] + "\t" + menuItems[i][1]);
