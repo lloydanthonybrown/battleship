@@ -1,7 +1,8 @@
 package battleship;
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Battleship {
+public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
     
     String name;

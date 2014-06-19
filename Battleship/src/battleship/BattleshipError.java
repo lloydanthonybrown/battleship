@@ -1,9 +1,10 @@
 package battleship;
-/*
-author Lloyd Brown
+import java.io.Serializable;
+
+/* author Lloyd Brown
 */
 
-public class BattleshipError {
+public class BattleshipError implements Serializable{
  
     public Object displayError(Object object) {
         String message = (String) object;

@@ -1,8 +1,10 @@
 package battleship;
+import java.io.Serializable;
 
 /* @author lloydab
  */
-public class BattleshipGameMenuControl {
+
+public class BattleshipGameMenuControl implements Serializable{
     /*private boolean isWinner() {
 
         // Location[][] locations = this.board.boardLocations;

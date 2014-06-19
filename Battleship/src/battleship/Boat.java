@@ -1,6 +1,7 @@
 package battleship;
+import java.io.Serializable;
 
-public class Boat {
+public class Boat implements Serializable{
     int hitcheck;
     //added by ckcarroll
     
