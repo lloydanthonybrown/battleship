@@ -6,8 +6,7 @@ public class Boat implements Serializable{
     //added by ckcarroll
     
    public Boat(){
-        
-    }
+   }
     
     int rowBoat [] = new int [1];
     int Sloop [] = new int [2];
@@ -16,8 +15,7 @@ public class Boat implements Serializable{
     
     String model;
     int length;
-    
-    
+        
     private int isSunk(){
         
         //check to see if ships are sunk

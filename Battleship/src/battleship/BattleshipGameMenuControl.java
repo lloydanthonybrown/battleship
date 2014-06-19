@@ -5,6 +5,9 @@ import java.io.Serializable;
  */
 
 public class BattleshipGameMenuControl implements Serializable{
+
+    public BattleshipGameMenuControl() {
+    }
     /*private boolean isWinner() {
 
         // Location[][] locations = this.board.boardLocations;
@@ -55,4 +58,6 @@ public class BattleshipGameMenuControl implements Serializable{
         }
         
     }*/
+    
+    
 }

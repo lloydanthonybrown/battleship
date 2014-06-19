@@ -15,4 +15,12 @@ public class BattleshipLocation implements Serializable{
     public void occupyLocation(Player player) {
         this.player = player;
     }
+
+    public BattleshipLocation(int row, int column, Player player) {
+        this.row = row;
+        this.column = column;
+        this.player = player;
+    }
+    
+    
 }

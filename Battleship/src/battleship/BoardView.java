@@ -27,6 +27,14 @@ public class BoardView implements Serializable{
                 System.out.print(gameboard[i][j] + ", ");
             System.out.println();}
         }
+
+    public BoardView() {
+    }
+
+    public BoardView(int i, int j) {
+        this.i = i;
+        this.j = j;
+    }
         
             
 }
