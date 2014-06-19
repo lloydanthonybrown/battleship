@@ -1,7 +1,7 @@
 package battleship;
 import java.io.Serializable;
 
-//Authors: KamiAnn Dastrup, Ruben Gonzalez, Lloyd Brown, Chris Carroll
+//Authors: KamiAnne Dastrup, Ruben Gonzalez, Lloyd Brown, Chris Carroll
 public class UserHelp implements Serializable {
     String rules;
     
@@ -10,6 +10,7 @@ public class UserHelp implements Serializable {
     private static double totalGames;
     private static double losingPercentage;
     
+    //Do we want to use this statistic or delete? If so class can be deleted.
     public static double getLosingPercentage() {
        
         //check for valid values

@@ -39,8 +39,9 @@ public class Battleship implements Serializable{
         Grid.getPercentageOfGameComplete(); 
         Grid.getPercentageOfGameComplete(); */
         
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
+        //duplicate instance created
+        //MainMenuView mainMenu = new MainMenuView();
+        //mainMenu.getInput();
     }
 
     public Battleship() {
