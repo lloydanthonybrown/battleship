@@ -1,27 +1,93 @@
 package battleship;
+
+import java.awt.Point;
+import java.io.Serializable;
 import java.util.Scanner;
+
 /* author Lloyd Brown
 */
 
-public class Grid {
-    public int width = 30;
-    public int height = width;
-    public double gridSize = width * height;
-    public int guesses; 
-    /* This is a crappy way of doing it, I know. It would be better to have
-    * calculated the number of ships first, and how big those ships are, and 
-    * then used that as the upper boundary for how many hits could be achieved.
-    */
+public class Grid implements Serializable {
+    int width;
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+   
+    int height;
+    private double gridSize;
+    private int guesses; 
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public double getGridSize() {
+        return gridSize;
+    }
+
+    public void setGridSize(double gridSize) {
+        this.gridSize = gridSize;
+    }
+
+    public int getGuesses() {
+        return guesses;
+    }
+
+    public void setGuesses(int guesses) {
+        this.guesses = guesses;
+    }
+    
+    public Grid(int guesses) {
+        this.gridSize = width * height;
+        this.height = width;
+        this.width = 30;
+        this.guesses = guesses;
+    }
+    
+   
+    
     private int numberOfHits;
     private int numberOfHitsPossible;  
-    /* public void getGridSize() {
-        Grid testGrid = new Grid();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter the length of one side of the grid: ");
-        this.width = input.nextByte();
-        testGrid.getGridSize();
+
+    public Grid(int numberOfHits, int numberOfHitsPossible) {
+        this.numberOfHits = numberOfHits;
+        this.numberOfHitsPossible = numberOfHitsPossible;
     }
-    */
+
+    public int getNumberOfHits() {
+        return numberOfHits;
+    }
+
+    public void setNumberOfHits(int numberOfHits) {
+        this.numberOfHits = numberOfHits;
+    }
+
+    public int getNumberOfHitsPossible() {
+        return numberOfHitsPossible;
+    }
+
+    public void setNumberOfHitsPossible(int numberOfHitsPossible) {
+        this.numberOfHitsPossible = numberOfHitsPossible;
+    }
+    
+    
+   
     
     public void displayGridWidth() {
         System.out.println(width);
@@ -32,51 +98,22 @@ public class Grid {
     }
 
     public Grid(){
+        this.gridSize = width * height;
+        this.height = width;
+        this.width = 30;
         
     }
     public Grid(int guesses, int numberOfHits, int numberOfHitsPossible) {
+        this.gridSize = width * height;
+        this.height = width;
+        this.width = 30;
         this.guesses = guesses;
         this.numberOfHits = numberOfHits;
         this.numberOfHitsPossible = numberOfHitsPossible;
     }
     
-//    Grid grid1 = new Grid(10, 4, 17);
-//        System.out.println(this.gridSize);
-//
-//    private static class gridSize {
-//
-//        public gridSize() {
-//        }
-//    }
-    /*public static double getPercentageOfGameComplete(){
-        Grid grid1 = new Grid(10, 4, 17);
-        
-        if (size < 0)  {
-            System.out.println("Invalid grid size");
-            return -1;}
-        if (numberOfHits == 0)  {
-            System.out.println("Invalid grid size");
-            return 0;}
-        if (numberOfHits < 0)  {
-            System.out.println("Invalid number of hits");
-            return -1;}
-        if (numberOfHitsPossible < 0) {
-            System.out.println("Invalid number of hits possible");
-            return -1;}
-        if (guesses < 0) {
-            System.out.println("Invalid number of guesses");
-            return -1;}
-        if (numberOfHits > guesses)  {
-            System.out.println("Invalid number of hits - cannot be greater than "
-                    + " number of guesses");
-            return -1;}
-        
-        double percentageGuessed = guesses / size;
-        
-        if (percentageGuessed = 0){
-            return 0;}
     
-    }*/
+
     
      public static void printRow(int[] row) {
       
@@ -96,11 +133,92 @@ public class Grid {
             }
         }
 
-        /*Arrays.asList(gridArray).indexOf(27);
+       
+    private Grid largeGrid = new Grid();
+    
+    public Point getInput() {
+
+        Scanner inFile = new Scanner(System.in); // get input file      
+        String[] coordinates;
+        Point location = null;
         
-        for(int[] row : gridArray) {
-            printRow(row);
-        }*/
+        boolean valid = false;
+        
+
+        // prompt the use to enter the locaton to placeread the row and column coordinates
+        while (!valid) {
+            // prompt for the row and column numbers
+            System.out.println("\n\n\t" + "Dear hoodlum, it is your turn."
+                + " Enter a row and column number (For example: 1 3)");
+            
+            // get the value entered by the user 
+            String strRowColumn = inFile.nextLine(); 
+            
+            // trim off all extra blanks from the input
+            strRowColumn = strRowColumn.trim();  
+            
+            // replace any commas enter with blanks
+            strRowColumn = strRowColumn.replace(',', ' '); 
+            
+            // tokenize the string into an array of words
+            coordinates = strRowColumn.split("\\s"); 
+
+            if (coordinates.length < 1) { // the value entered was not blank?
+                new BattleshipError().displayError(
+                        "You must enter two numbers, a row and the column, "
+                        + "or a \"Q\" to quit. Try again.");
+                continue;
+            }    
+
+            else if (coordinates.length == 1) { // only one coordinate entered?
+                if (coordinates[0].toUpperCase().equals("Q")) { // Quit?
+                    return null;
+                } else { // wrong number of values entered.
+                    new BattleshipError().displayError(
+                        "You must enter two numbers, a row and the column, "
+                        + "or a \"Q\" to quit. Try again.");
+                    continue;
+                }
+            }
+            
+            // user java regular expression to check for valid integer number 
+            // for both numbers
+            String regExpressionPattern = ".*\\d.*";
+            if (!coordinates[0].matches(regExpressionPattern) ||
+                !coordinates[1].matches(regExpressionPattern)) {
+                new BattleshipError().displayError(
+                        "You must enter two numbers, the number rows and columns, "
+                        + "or a \"Q\" to quit. Try again.");
+                continue;
+            }
+            
+            // convert each of the cordinates from a String type to 
+            // an integer type
+            int row = Integer.parseInt(coordinates[0]);
+            int column = Integer.parseInt(coordinates[1]);
+                     
+            // I think this works?? We'll see.
+            Grid grid = this.largeGrid;
+            
+            // Check for invalid row and column entered
+            if (row < 1   ||  row > grid.width ||
+                column < 1  ||  column > grid.height) {
+                new BattleshipError().displayError(
+                        "Please enter a valid number of rows and columns from 1 to 30.");
+                continue;
+            }
+            
+            // create a Point object to store the row and column coordinates in
+            location = new Point(row-1, column-1);
+            
+
+            valid = true; // a valid location was entered
+
+        }
+        
+        return location; 
+            
+    }
      }
     
 }
