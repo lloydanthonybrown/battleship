@@ -219,6 +219,12 @@ public class Grid implements Serializable {
         return location; 
             
     }
+     public Grid getLargeGrid() {
+        return largeGrid;
+    }
+      public void setLargeGrid(Grid largeGrid) {
+        this.largeGrid = largeGrid;
+    }
      }
     
 }
