@@ -133,7 +133,7 @@ public class Grid implements Serializable {
             }
         }
 
-     /*  
+     
     private Grid largeGrid = new Grid();
     
     public Point getInput() {
@@ -218,7 +218,7 @@ public class Grid implements Serializable {
         
         return location; 
             
-    }*/
+    }
      }
     
 }
