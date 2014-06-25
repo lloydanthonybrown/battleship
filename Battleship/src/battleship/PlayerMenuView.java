@@ -32,7 +32,6 @@ public class PlayerMenuView implements Serializable {
     
     //display Player Menu and get user input selection
     public void getInput() {
-    
         String command;
         Scanner inFile = new Scanner(System.in);
         
