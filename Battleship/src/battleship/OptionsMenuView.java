@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /* @author lloydab
  */
-public class OptionsMenuView {
+public class OptionsMenuView extends MainMenuView{
     
      private final static String[][] menuItems = {
         {"D", "Difficulty"},
@@ -18,6 +18,7 @@ public class OptionsMenuView {
     public OptionsMenuView() {
     } 
 
+     @Override
     public void getInput() {       
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -52,6 +53,7 @@ public class OptionsMenuView {
     }
 
         // displays the options menu
+     @Override
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");

@@ -2,7 +2,7 @@ package battleship;
 
 /* @author lloydab
  */
-public class OptionsMenuControl {
+public class OptionsMenuControl extends MainMenuControl{
 
       public OptionsMenuControl() {
     } 
@@ -56,6 +56,7 @@ public class OptionsMenuControl {
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
     
+      @Override
     public void displayHelpBorder() {
         System.out.println(
         "\t*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
