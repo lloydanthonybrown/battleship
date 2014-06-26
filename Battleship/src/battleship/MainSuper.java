@@ -90,7 +90,7 @@ public abstract class Menu{
             command= command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)){
-                new battleshipError();
+                new battleshipError().displayError("Invalid Command. Please try again.");
             }
         
         }
