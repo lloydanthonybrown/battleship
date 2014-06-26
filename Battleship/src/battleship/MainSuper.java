@@ -6,7 +6,15 @@ package battleship;
  */
 public class MainSuper {
     
-    private final String [][] menuItems=null;
+    private final String [][] menuItems={
+        {"1", "Play against the Computer"},
+        {"2", "Play agaist a person...like your friend or something"},
+        {"3", "Help Menu"},
+        {"4", "Options"},
+        {"5", "Main Menu"},
+        {"6", "Get outta here"}
+        
+    };
     public MainSuper(){
         
     }
