@@ -80,7 +80,23 @@ public abstract class Menu{
     }
     
     protected final String getCommand(){
-        return null;
+        //something a little like this...
+        String command;
+        Scanner inFile = battleship.getInputFile();
+        boolean valid = false;
+        
+        do{
+            command = inFile.nextLine();
+            command= command.trim().toUpperCase();
+            valid = validCommand(command);
+            if (!validCommand(command)){
+                new battleshipError();
+            }
+        
+        }
+        
+        return command;
+        return command;
     }
     
 }
