@@ -57,7 +57,13 @@ public abstract class Menu{
     }
     
     protected final void display(){
+        System.out.println("\n\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+        System.out.println("Please enter a command for the corresponding options");
         
+        for (String[] menuItem : this.menuItems) {
+            System.out.println("\t  " + menuItem[0] + "\t" + menuItem[1]);
+        }
+        System.out.println("\n\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
     
     private boolean validCommand(String command){
