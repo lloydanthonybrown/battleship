@@ -69,4 +69,25 @@ public abstract class Menu{
     }
     
 }
+
+    public class MainMenu extends MainSuper{
+        
+        private final static String[][] menuItems = {
+            {"C", "Control"},
+            {"V", "View"}, 
+            {"S", "Start now"},
+            {"R", "Resume"},
+            {"A", "Advanced Options"},
+            {"M", "Music"},        
+            {"Q", "Quit"}
+        };
+        
+        public MainMenu() {
+            super(MainMenu.menuItems);}
+        
+        @Override  
+        public String executeCommands(){
+            return null;
+        }
+    }
 }
