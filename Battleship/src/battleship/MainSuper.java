@@ -15,7 +15,7 @@ public class MainSuper {
         {"6", "Get outta here"}
         
     };
-    */
+    
     public MainSuper(){
         
     }
@@ -30,7 +30,7 @@ public class MainSuper {
     protected final void display(){
         
     }
-    
+    */
     private boolean validCommand(String command){
       String [][] items = this.menuItems;
 	
@@ -44,7 +44,6 @@ public class MainSuper {
         
     }
     
-     
     public String executeCommands(){
         return null;
     }
