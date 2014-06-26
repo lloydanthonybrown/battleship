@@ -70,7 +70,7 @@ public abstract class Menu{
     
 }
 
-    public class MainMenu extends MainSuper{
+    public class MainMenu extends MainSuper {
         
         private final static String[][] menuItems = {
             {"C", "Control"},
