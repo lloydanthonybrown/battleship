@@ -45,7 +45,7 @@ public class MainSuper {
         return null;
     }
     
-public abstract class Menu{
+public class Menu{
     
     public final String [][] menuItems=null;
     
