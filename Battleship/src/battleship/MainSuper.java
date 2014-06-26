@@ -32,7 +32,11 @@ public class MainSuper {
     }
     
     private boolean validCommand(String command){
-        return false;
+      String [][] items = this.menuItems;
+	
+	    if(item[0].equals(command));{
+	    return true;
+	}    
         
     }
     protected final String getCommand(){
