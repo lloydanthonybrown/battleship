@@ -19,14 +19,24 @@ public class MainMenuView {
     private final MainMenuControl mainMenuControl = new MainMenuControl();
 
     public MainMenuView() {
+         super(MainMenuView.menuItems);
+         
     } 
 
-    public void getInput() {       
+       @Override
+    public String executeCommands(Object object){
+
+    
+      
+              
         String command;
         Scanner inFile = new Scanner(System.in);
         
         do {
+            
             this.display(); 
+            
+           
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
@@ -47,24 +57,25 @@ public class MainMenuView {
                     this.mainMenuControl.displayMusic();
                     break;
                 case "A":
-                    this.mainMenuControl.displayAdvancedOptions();
-                    break;
+                  this.mainMenuControl.displayAdvancedOptions();
+                     break;
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
                   
             }
         } while (!command.equals("Q"));  
+         return command;
+        
+         
     }
 
-        // displays the help menu
-    public final void display() {
-        System.out.println("\n\tжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжж");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
+   
+    
 
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\tжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжж\n");
-    }
+    
+  
+}
+
+  
   
 }
