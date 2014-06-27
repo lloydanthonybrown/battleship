@@ -48,7 +48,7 @@ public class MainSuper {
         return null;
     }
     
-public class Menu{
+public abstract class Menu{
     
     public final String [][] menuItems=null;
     
@@ -95,11 +95,11 @@ public class Menu{
             if (!validCommand(command)){
                 new battleshipError().displayError("Invalid Command. Please try again.");
             }
-        
+         return command;
         }
         
         return command;
-        return command;
+ 
     }
     
 }
