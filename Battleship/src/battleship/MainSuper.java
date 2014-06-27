@@ -1,19 +1,21 @@
 package battleship;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ckcarroll
  */
 public class MainSuper {
-    
-   /* private final String [][] menuItems={
+  /*  
+    private final String [][] menuItems={
         {"1", "Play against the Computer"},
-        {"2", "Play against a person...like your friend or something"},
+        {"2", "Play agaist a person...like your friend or something"},
         {"3", "Help Menu"},
         {"4", "Options"},
         {"5", "Main Menu"},
         {"6", "Get outta here"}
-        
+            
     };
     
     public MainSuper(){
@@ -29,46 +31,58 @@ public class MainSuper {
     
     protected final void display(){
         
-    }
-    */
-    private boolean validCommand(String command){
-      String [][] items = this.menuItems;
+    }*/
+    
+   /* private boolean validCommand(String command){
+	String [][] items = this.menuItems;
 	
 	    if(item[0].equals(command));{
 	    return true;
 	}    
-        
     }
     protected final String getCommand(){
         return null;
         
     }
     
-    public String executeCommands(){
+    public String executeCommands(Object object){
         return null;
-    }
+    }*/
     
 public abstract class Menu{
     
-    public final String [][] menuItems=null;
+    private final String [][] menuItems=null;
     
     public Menu(){
         
     }
     
-    public Menu(String [][] menuItems){
+    public void getInput(){
+        String command;
+        Scanner inFile;
+        inFile = new Scanner(System.in);
+        
         
     }
+
+    public Menu(String [][] menuItems){
+	this();
+        menuItems = menuItems;
+	
+    }
+    
+    public abstract String executeCommands(Object objeect);
+    
     
     public String[][] getMenuItems(){
-        return null;
+        return menuItems;
     }
     
     public void setMenuItems(String[][] menuItems){
         
     }
     
-    protected final void display(){
+    public final void display(){
         System.out.println("\n\tжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжж");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
@@ -79,13 +93,21 @@ public abstract class Menu{
     }
     
     private boolean validCommand(String command){
+        String[][] items = this.menuItems;
+        
+        for (String [] item : this.menuItems){
+         if (item[0].equals(command)){
+             return true;
+         }
+        }
+        
         return false;
     }
     
     protected final String getCommand(){
-        //something a little like this...
+        
         String command;
-        Scanner inFile = battleship.getInputFile();
+        Scanner inFile = battleship.getInput();
         boolean valid = false;
         
         do{
@@ -93,35 +115,17 @@ public abstract class Menu{
             command= command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)){
-                new battleshipError().displayError("Invalid Command. Please try again.");
+                new BattleshipError().displayError("Invalid Command. Please try again.");
+	
             }
-         return command;
-        }
-        
         return command;
- 
-    }
+        
+       
+        } while(!valid);
+        
+        
+}    
     
 }
 
-    public class MainMenu extends MainSuper {
-        
-        private final static String[][] menuItems = {
-            {"C", "Control"},
-            {"V", "View"}, 
-            {"S", "Start now"},
-            {"R", "Resume"},
-            {"A", "Advanced Options"},
-            {"M", "Music"},        
-            {"Q", "Quit"}
-        };
-        
-        public MainMenu() {
-            super(MainMenu.menuItems);}
-        
-        @Override  
-        public String executeCommands(){
-            return null;
-        }
-    }
 }
