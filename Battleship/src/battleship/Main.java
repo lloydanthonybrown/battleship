@@ -6,7 +6,7 @@ import java.util.Scanner;
  *
  * @author ckcarroll
  */
-public class MainSuper {
+//public class MainSuper {
   /*  
     private final String [][] menuItems={
         {"1", "Play against the Computer"},
@@ -128,4 +128,4 @@ public abstract class Menu{
     
 }
 
-}
+
