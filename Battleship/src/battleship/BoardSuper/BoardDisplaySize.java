@@ -4,4 +4,5 @@ package battleship.BoardSuper;
  */
 public class BoardDisplaySize extends Board {
     
+    
 }
