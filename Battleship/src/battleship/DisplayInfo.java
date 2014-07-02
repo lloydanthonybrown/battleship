@@ -4,4 +4,7 @@ package battleship;
  */
 public class DisplayInfo {
     
+    public void display(){
+        
+    }
 }

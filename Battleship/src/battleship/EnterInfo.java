@@ -4,4 +4,7 @@ package battleship;
  */
 public class EnterInfo {
     
+    public void getInput(){
+        
+    }
 }
