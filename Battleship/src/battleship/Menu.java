@@ -49,7 +49,7 @@ import java.util.Scanner;
         return null;
     }*/
     
-public class Menu{
+public class Menu implements DisplayInfo, EnterInfo{
     
     private final String [][] menuItems=null;
     

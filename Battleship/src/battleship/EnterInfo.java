@@ -1,10 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package battleship;
 
-/* @author lloydab
+/**
+ *
+ * @author Kam Kam
  */
-public class EnterInfo {
+public interface EnterInfo {
     
-    public void getInput(){
-        
-    }
 }
