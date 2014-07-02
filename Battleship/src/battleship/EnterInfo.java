@@ -11,5 +11,5 @@ package battleship;
  * @author Kam Kam
  */
 public interface EnterInfo {
-    
+    void getInput();
 }
