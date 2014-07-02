@@ -1,4 +1,5 @@
 package battleship;
+import battleship.menu.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
 

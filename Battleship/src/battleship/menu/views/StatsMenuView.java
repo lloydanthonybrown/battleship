@@ -2,7 +2,8 @@
  I think this class can be deleted. We have stats listed in the Options Menu.
  */
 
-package battleship;
+package battleship.menu.views;
+import battleship.StatsMenuControl;
 import java.util.Scanner;
 import java.io.Serializable;
 /**

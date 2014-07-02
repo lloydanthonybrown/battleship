@@ -1,4 +1,5 @@
-package battleship;
+package battleship.menu.views;
+import battleship.OptionsMenuControl;
 import java.util.Scanner;
 
 /* @author lloydab

@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package battleship;
+package battleship.menu.views;
 
+import battleship.PlayerMenuControl;
 import java.util.Scanner;
 import java.io.Serializable;
 /**
