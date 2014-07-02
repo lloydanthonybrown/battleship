@@ -49,7 +49,7 @@ import java.util.Scanner;
         return null;
     }*/
     
-public abstract class Menu{
+public class Menu{
     
     private final String [][] menuItems=null;
     
@@ -70,8 +70,6 @@ public abstract class Menu{
         menuItems = menuItems;
 	
     }
-    
-    public abstract String executeCommands(Object objeect);
     
     
     public String[][] getMenuItems(){
