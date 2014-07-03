@@ -1,4 +1,6 @@
-package battleship;
+package battleship.menu.controls;
+
+import battleship.menu.controls.MainMenuControl;
 
 /* @author lloydab
  */

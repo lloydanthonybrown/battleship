@@ -6,7 +6,7 @@
 
 package battleship.menu.views;
 
-import battleship.PlayerMenuControl;
+import battleship.menu.controls.PlayerMenuControl;
 import java.util.Scanner;
 import java.io.Serializable;
 /**

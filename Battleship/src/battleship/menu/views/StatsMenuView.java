@@ -3,7 +3,7 @@
  */
 
 package battleship.menu.views;
-import battleship.StatsMenuControl;
+import battleship.menu.controls.StatsMenuControl;
 import java.util.Scanner;
 import java.io.Serializable;
 /**

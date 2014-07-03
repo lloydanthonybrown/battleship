@@ -1,7 +1,7 @@
 package battleship.menu.views;
 
 import battleship.BattleshipError;
-import battleship.HelpMenuControl;
+import battleship.menu.controls.HelpMenuControl;
 import java.util.Scanner;
 
 /**

@@ -1,5 +1,7 @@
 package battleship;
 
+import battleship.interfaces.EnterInfo;
+import battleship.interfaces.DisplayInfo;
 import java.util.Scanner;
 
 
