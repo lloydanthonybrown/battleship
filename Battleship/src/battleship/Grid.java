@@ -134,9 +134,9 @@ public class Grid implements Serializable {
         }
 
      
-    private Grid largeGrid = new Grid();
+    Grid largeGrid = new Grid();
     
-    public Point getInput() {
+    /*public Point getInput() {
 
         Scanner inFile = new Scanner(System.in); // get input file      
         String[] coordinates;
@@ -224,7 +224,7 @@ public class Grid implements Serializable {
     }
       public void setLargeGrid(Grid largeGrid) {
         this.largeGrid = largeGrid;
-    }
+    }*/
      }
     
 }

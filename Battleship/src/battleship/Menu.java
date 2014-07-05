@@ -62,7 +62,8 @@ public class Menu implements DisplayInfo, EnterInfo{
     protected final String getCommand(){
         
         String command;
-        Scanner inFile = battleship.getInput();
+        Scanner inFile = new Scanner(System.in);
+        //Scanner inFile = battleship.getInput();
         boolean valid = false;
         
         do{
