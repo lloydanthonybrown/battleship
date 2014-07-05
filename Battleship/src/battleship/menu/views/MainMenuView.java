@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author ckcarroll
  */
-public abstract class MainMenuView extends Menu{
+public class MainMenuView extends Menu{
      private final static String[][] menuItems = {
         {"C", "Control"},
         {"V", "View"}, 

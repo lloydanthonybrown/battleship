@@ -1,10 +1,11 @@
 package battleship.menu.views;
 import battleship.menu.controls.OptionsMenuControl;
 import java.util.Scanner;
+import battleship.Menu;
 
 /* @author lloydab
  */
-public class OptionsMenuView extends MainMenuView{
+public class OptionsMenuView extends Menu{
     
      private final static String[][] menuItems = {
         {"D", "Difficulty"},
@@ -54,7 +55,7 @@ public class OptionsMenuView extends MainMenuView{
     }
 
         // displays the options menu
-     @Override
+    /* @Override
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -63,5 +64,5 @@ public class OptionsMenuView extends MainMenuView{
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
-    }
+    }*/
 }
