@@ -1,6 +1,6 @@
 package battleship.player;
 
-import battleship.PlayerSuper;
+import PlayerSuper;
 
 /**
  *
