@@ -73,16 +73,6 @@ public class MainMenuView extends Menu{
         return command;
     }
 
-     /*   // displays the help menu
-    public final void display() {
-        System.out.println("\n\tжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжж");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\tжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжжж\n");
-    }*/
     
     
   
