@@ -32,18 +32,12 @@ public class Battleship implements Serializable{
         mainMenu.getInput();
         int array1[] = {8, 12, 10, 20, 17};
         int array2[] = {0, 4, 2, 0};
-//        int k, r, v;
-//        k = 4;
-//        r = 0;
-//        v = 2;
+        
         for(int i = 0; i<array1.length; i++){
             try {
                 System.out.println(array1[i] + " / " +
                         array2[i] + " is " + 
                         array1[i]/array2[i]);
-            // System.out.println(k + " / " + r + " is " + k / r);
-            // required a for loop, but I didn't want to think that hard. 
-            // System.out.println(k + " / " + v + " is " + v / r);
         }
         catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("Array out of bounds, ya loon.");
