@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
-    
+    private static final Scanner inFile = new Scanner(System.in);
     private String name;
     private String instructions = "The game of Battleship \n\n"
             + "You will have the choice of playing against another person\n"
@@ -51,6 +51,9 @@ public class Battleship implements Serializable{
         catch (Throwable ex) {
             System.out.println("Something else wrong happened.");
         }
+        finally {
+                
+            }
     }
         
        //call function from UserHelp
