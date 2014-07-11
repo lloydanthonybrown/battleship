@@ -61,7 +61,7 @@ public class PlayerArtSub extends PlayerSuper {
                right++;
            }
            else{
-               hit=miss;
+               
                System.out.println("Battleship Sunk\n Ты Лучшее");
            }
            
