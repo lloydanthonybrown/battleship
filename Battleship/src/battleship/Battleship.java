@@ -46,7 +46,7 @@ public class Battleship implements Serializable{
             System.out.println("Something else wrong happened.");
         }
         finally {
-                
+                Battleship.inFile.close();
             }
     }
         
