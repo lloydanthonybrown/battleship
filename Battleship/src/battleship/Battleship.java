@@ -36,7 +36,8 @@ public class Battleship implements Serializable{
         v = 2;
         try {
             System.out.println(k + " / " + r + " is " + k / r);
-            System.out.println(k + " / " + v + " is " + v / r);
+            // required a for loop, but I didn't want to think that hard. 
+            // System.out.println(k + " / " + v + " is " + v / r);
         }
         catch (ArithmeticException ex) {
             System.out.println("Can't divide by zero, silly goose!");
