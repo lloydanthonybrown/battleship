@@ -30,6 +30,17 @@ public class Battleship implements Serializable{
         myGame.displayHelp();
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
+        int k, r, v;
+        k = 4;
+        r = 0;
+        v = 2;
+        try {
+            System.out.println(k + " / " + r + " is " + k / r);
+            System.out.println(k + " / " + v + " is " + v / r);
+        }
+        catch (ArithmeticException ex) {
+            System.out.println("Can't divide by zero, silly goose!");
+        }
         
        //call function from UserHelp
         /* int wins = 8;
