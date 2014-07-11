@@ -44,6 +44,7 @@ public class Battleship implements Serializable{
         }
         catch (Throwable ex) {
             System.out.println("Something else wrong happened.");
+            ex.printStackTrace();
         }
         finally {
                 Battleship.inFile.close();
