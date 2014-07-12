@@ -44,7 +44,7 @@ public class PlayerMenuView implements Serializable {
                 xe=2;
             }
             catch(Exception ex){
-                System.out.println("No acceptable input, plese try again.");
+                System.out.println("No acceptable input, please try again.");
             }
             }while(xe==1);
             this.display(); //display menu
