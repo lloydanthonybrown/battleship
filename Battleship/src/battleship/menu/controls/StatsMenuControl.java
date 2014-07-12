@@ -4,6 +4,7 @@ I think this class can be deleted. We have stats listed in the Options Menu.
 
 package battleship.menu.controls;
 import java.io.Serializable;
+import battleship.exceptions.GameException;
 
 /**
  *
@@ -37,11 +38,20 @@ public class StatsMenuControl implements Serializable {
         displayHelpBorder();
     }
     
-    public void percentWinsTotal() {
+    public int percentWinsTotal() {
         System.out.println();
         this.displayHelpBorder();
-        System.out.println("\tPercent of Wins:");
-        displayHelpBorder();
+        int wins = 0;
+        int losses = 0;
+        int percentWins = 0;
+        try{
+            percentWins = wins / (wins + losses);
+            System.out.println("\tPercent of Wins:" + percentWins);
+            displayHelpBorder();}
+        catch (ArithmeticException exc){
+            System.out.println("Cannot divide by zero");
+        }
+        return percentWins;
     }
     
     public void displayError() {
