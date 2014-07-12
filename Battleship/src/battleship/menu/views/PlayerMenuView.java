@@ -35,15 +35,18 @@ public class PlayerMenuView implements Serializable {
     public void getInput() {
         String command;
         Scanner inFile = new Scanner(System.in);
+        int xe = 1;
         
         do {
+            do{
             try{
                 System.out.println("Please enter corresponding value: ");
-                        
+                xe=2;
             }
             catch(Exception ex){
-                System.out.println("No exceptable input, plese try again.");
+                System.out.println("No acceptable input, plese try again.");
             }
+            }while(xe==1);
             this.display(); //display menu
             
             //get command entered
