@@ -1,5 +1,6 @@
 package battleship.menu.views;
 import battleship.BattleshipError;
+import battleship.interfaces.EnterInfo;
 import battleship.menu.controls.MainMenuControl;
 import java.util.Scanner;
 
@@ -7,14 +8,21 @@ import java.util.Scanner;
  *
  * @author ckcarroll
  */
-public class MainMenuView extends Menu{
+public class MainMenuView extends Menu implements EnterInfo{
+    
+    public static final String CONTROL = "CONTROL";
+    public static final String VIEW = "VIEW";
+    public static final String START_GAME = "START_GAME";
+    public static final String RESUME = "RESUME";
+    public static final String QUIT = "QUIT";
+    public static final String ADVANCED_OPTIONS = "ADVANCED_OPTIONS";
+    
      private final static String[][] menuItems = {
         {"C", "Control"},
         {"V", "View"}, 
         {"S", "Start now"},
         {"R", "Resume"},
         {"Q", "Quit"},
-        {"M", "Music"},        
         {"A", "Advanced Options"}        
     };
      
@@ -26,10 +34,10 @@ public class MainMenuView extends Menu{
             
         
    
-    private final MainMenuControl mainMenuControl = new MainMenuControl();
+    //private final MainMenuControl mainMenuControl = new MainMenuControl();
     
-   
-    public String executeCommands(Object object){
+   @Override
+    public String getInput(Object object){
 
     
       
@@ -47,22 +55,19 @@ public class MainMenuView extends Menu{
             
             switch (command) {
                 case "C":
-                    this.mainMenuControl.displayControlHelp();
+                    this.displayHelp(MainMenuView.CONTROL);
                     break;
                 case "V":
-                    this.mainMenuControl.displayViewHelp();
+                    this.displayHelp(MainMenuView.VIEW);
                     break;
                 case "R":
-                    this.mainMenuControl.displayResume();
+                    this.displayHelp(MainMenuView.RESUME);
                     break;
                 case "Q":
-                    this.mainMenuControl.displayQuit();
-                    break;
-                case "M":
-                    this.mainMenuControl.displayMusic();
+                    this.displayHelp(MainMenuView.QUIT);
                     break;
                 case "A":
-                  this.mainMenuControl.displayAdvancedOptions();
+                  this.displayHelp(MainMenuView.ADVANCED_OPTIONS);
                      break;
                 default: 
                     new BattleshipError().displayError("Invalid command. Please enter a valid command.");
@@ -72,7 +77,43 @@ public class MainMenuView extends Menu{
         return command;
     }
 
-    
+    // displays the main menu
+    private void displayHelp(String helpType) {
+        
+        String helpText = null;
+        
+        switch (helpType) {
+            case MainMenuView.CONTROL: helpText = 
+                "\t Controls- well, you just click on the grid...thats really it...";
+                break;
+                
+            case MainMenuView.VIEW: helpText = 
+                "\t You can change the grid color to red, white, or blue.";
+                break;
+                
+            case MainMenuView.START_GAME: helpText = 
+                "\t Starting Game...";
+                break;
+                
+            case MainMenuView.RESUME: helpText = 
+                "\t Resume Game?";
+                break;
+                
+            case MainMenuView.QUIT: helpText = 
+                "\t Are you sure you want to exit?";
+                break;
+            
+            case MainMenuView.ADVANCED_OPTIONS: helpText = 
+                "\t Advanced options"
+                + "\n\t Player"
+                + "\n\t Options"
+                + "\n\t Statistics";
+                break;
+        }
+        System.out.println("\n\t===============================================================");
+        System.out.println(helpText);
+        System.out.println("\t===============================================================\n");
+    }
     
   
 }
