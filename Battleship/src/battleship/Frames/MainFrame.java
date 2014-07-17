@@ -33,7 +33,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jpMenuItems = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Main = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,7 +78,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpMenuItems.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jpMenuItems.setForeground(new java.awt.Color(0, 51, 153));
 
-        jButton1.setText("jButton1");
+        Main.setText("Main Menu");
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -86,14 +86,14 @@ public class MainFrame extends javax.swing.JFrame {
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(Main)
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(Main)
                 .addContainerGap(350, Short.MAX_VALUE))
         );
 
@@ -172,7 +172,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Main;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jpBody;
