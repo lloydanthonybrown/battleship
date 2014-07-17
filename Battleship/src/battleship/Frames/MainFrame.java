@@ -34,10 +34,10 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jpMenuItems = new javax.swing.JPanel();
         Main = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        optionButton = new javax.swing.JButton();
+        playerButton = new javax.swing.JButton();
+        statsButton = new javax.swing.JButton();
+        helpButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,13 +84,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         Main.setText("Main Menu");
 
-        jButton1.setText("Options");
+        optionButton.setText("Options");
 
-        jButton2.setText("Players");
+        playerButton.setText("Players");
 
-        jButton3.setText("Statistics");
+        statsButton.setText("Statistics");
 
-        jButton4.setText("HELP!!!");
+        helpButton.setText("HELP!!!");
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -100,10 +100,10 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Main)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(optionButton)
+                    .addComponent(playerButton)
+                    .addComponent(statsButton)
+                    .addComponent(helpButton))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
@@ -112,13 +112,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(Main)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(optionButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(playerButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(statsButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(helpButton)
                 .addContainerGap(162, Short.MAX_VALUE))
         );
 
@@ -198,14 +198,14 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Main;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton helpButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
+    private javax.swing.JButton optionButton;
+    private javax.swing.JButton playerButton;
+    private javax.swing.JButton statsButton;
     // End of variables declaration//GEN-END:variables
 }

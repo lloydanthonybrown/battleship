@@ -158,10 +158,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Main" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="optionButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="playerButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="statsButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="helpButton" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="145" max="32767" attributes="0"/>
                   </Group>
@@ -173,13 +173,13 @@
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="Main" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="optionButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="playerButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="statsButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="helpButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="162" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -191,22 +191,22 @@
                 <Property name="text" type="java.lang.String" value="Main Menu"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="optionButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Options"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="playerButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Players"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="statsButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Statistics"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="helpButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="HELP!!!"/>
               </Properties>
