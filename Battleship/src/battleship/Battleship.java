@@ -6,29 +6,9 @@ import java.util.Scanner;
 public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
     
-    Battleship battleship = null;
+  
     
-    try{
-        battleship = new Battleship();
-        java.awt.EventQueue.invokeLater(new Runnable(){
-            public void run(){
-                Battleship.mainFrame = new MainFrame();
-                
-                Battleship.mainFrame.setVisible(true);
-            }
-        });
-    }
     
-    catch (Throwable ex){
-        ErrorType.displayErrorMsg("Unexpected error: " + ex.getMessage());
-        ErrorType.displayErrorMsg(ex.getStackTrace().toString());
-        
-    }
-    finally{
-        if (Battleship.mainFrame != null){
-            Battleship.mainFrame.dispose();
-        }
-    }
     
     
     
@@ -52,6 +32,10 @@ public class Battleship implements Serializable{
     }
             
     public static void main(String[] args) {
+        
+        
+        
+        
         Battleship myGame = new Battleship();
         myGame.getName();
         myGame.displayHelp();
@@ -121,6 +105,7 @@ public class Battleship implements Serializable{
     //****************************
     
     // The remaining getters and setters for this Battleship.java class.
+
     public void setName(String name) {
         this.name = name;
     }
