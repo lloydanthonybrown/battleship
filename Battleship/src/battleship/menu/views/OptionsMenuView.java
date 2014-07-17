@@ -1,7 +1,6 @@
 package battleship.menu.views;
 import battleship.menu.controls.OptionsMenuControl;
 import java.util.Scanner;
-import battleship.Menu;
 
 /* @author lloydab
  */
