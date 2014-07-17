@@ -1,11 +1,18 @@
 package battleship.menu.views;
+import battleship.BattleshipError;
+import battleship.interfaces.EnterInfo;
 import battleship.menu.controls.OptionsMenuControl;
 import java.util.Scanner;
 
 /* @author lloydab
  */
-public class OptionsMenuView extends Menu{
+public class OptionsMenuView extends Menu implements EnterInfo{
     
+    public static final String DIFFICULTY = "DIFFICULTY";
+    public static final String NUMBER_PLAYERS = "NUMBER_PLAYERS";
+    public static final String PLAYER_OPTIONS = "PLAYER_OPTIONS";
+    public static final String STATISTICS = "STATISTICS";
+        
      private final static String[][] menuItems = {
         {"D", "Difficulty"},
         {"N", "Number of Players"}, 
@@ -14,13 +21,14 @@ public class OptionsMenuView extends Menu{
         {"Q", "Quit Help"}        
     };
    
-    private final OptionsMenuControl optionsMenuControl = new OptionsMenuControl();
+    //private final OptionsMenuControl optionsMenuControl = new OptionsMenuControl();
 
     public OptionsMenuView() {
+        super(OptionsMenuView.menuItems);
     } 
 
      @Override
-    public void getInput() {       
+    public String getInput(Object object) {       
         String command;
         Scanner inFile = new Scanner(System.in);
         
@@ -31,37 +39,60 @@ public class OptionsMenuView extends Menu{
             
             switch (command) {
                 case "D":
-                    this.optionsMenuControl.changeDifficulty();
+                    this.displayHelp(OptionsMenuView.DIFFICULTY);
                     break;
                 case "N":
-                    this.optionsMenuControl.numberOfPlayers();
+                    this.displayHelp(OptionsMenuView.NUMBER_PLAYERS);
                     break;
                 case "P":
-                    this.optionsMenuControl.playerOptions();
+                    this.displayHelp(OptionsMenuView.PLAYER_OPTIONS);
                     break;                  
                 case "S":
-                    this.optionsMenuControl.playerStatistics();
+                    this.displayHelp(OptionsMenuView.STATISTICS);
                     break;
                 case "Q":
                     break;
                 default: 
-                    this.optionsMenuControl.displayError();
+                    new BattleshipError().displayError("Invalid command. Please enter a valid command.");
                     continue;
                                         
             }
         } while (!command.equals("Q"));  
-       return;
+       return command;
     }
 
         // displays the options menu
-    /* @Override
-    public final void display() {
+    private void displayHelp(String helpType) {
+        
+        String helpText = null;
+        
+        switch (helpType) {
+            case OptionsMenuView.DIFFICULTY: helpText = 
+                "\tBattleship has a grid of 10x10, 20x20, or 30x30 "
+                + "\n\t Select Easy for 10x10.  "
+                + "\n\t Select Medium for 20x20. "
+                + "\n\t Select Hard for 30x30.";
+                break;
+                
+            case OptionsMenuView.NUMBER_PLAYERS: helpText = 
+                "\tSelect whether you want to play 1 player vs. the computer, . "
+                + "\n\t or a 2 player game.";
+                break;
+                
+            case OptionsMenuView.PLAYER_OPTIONS: helpText = 
+                "\tWould you like to change the name of a player? ";
+                break;
+                
+            case OptionsMenuView.STATISTICS: helpText = 
+                "\tYour statistics show: "
+                + "\n\t Winning Percentage"
+                + "\n\t Total Games Played"
+                + "\n\t High Score";
+                break;
+                
+            }
         System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < OptionsMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
+        System.out.println(helpText);
         System.out.println("\t===============================================================\n");
-    }*/
+    }
 }
