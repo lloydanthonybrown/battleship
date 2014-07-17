@@ -23,7 +23,7 @@ public class HelpMenuView extends Menu implements EnterInfo{
         {"C", "Computer player"}, 
         {"O", "Battleship Objectives"},
         {"L", "Locations"},
-        {"B", "Boats"},
+        {"M", "Marker"},
         {"P", "People players"},        
         {"Q", "Quit Help"}        
     };

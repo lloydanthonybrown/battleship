@@ -14,7 +14,6 @@ public class MainMenuView extends Menu implements EnterInfo{
     public static final String VIEW = "VIEW";
     public static final String START_GAME = "START_GAME";
     public static final String RESUME = "RESUME";
-    public static final String QUIT = "QUIT";
     public static final String ADVANCED_OPTIONS = "ADVANCED_OPTIONS";
     
      private final static String[][] menuItems = {
@@ -64,7 +63,6 @@ public class MainMenuView extends Menu implements EnterInfo{
                     this.displayHelp(MainMenuView.RESUME);
                     break;
                 case "Q":
-                    this.displayHelp(MainMenuView.QUIT);
                     break;
                 case "A":
                   this.displayHelp(MainMenuView.ADVANCED_OPTIONS);
@@ -99,10 +97,6 @@ public class MainMenuView extends Menu implements EnterInfo{
                 "\t Resume Game?";
                 break;
                 
-            case MainMenuView.QUIT: helpText = 
-                "\t Are you sure you want to exit?";
-                break;
-            
             case MainMenuView.ADVANCED_OPTIONS: helpText = 
                 "\t Advanced options"
                 + "\n\t Player"
