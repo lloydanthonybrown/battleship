@@ -1,7 +1,9 @@
 package battleship;
+import battleship.Frames.MainFrame;
 import battleship.menu.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
+import javax.lang.model.type.ErrorType;
 
 public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
@@ -36,12 +38,12 @@ public class Battleship implements Serializable{
         try{
             battleship = new Battleship();
             java.awt.EventQueue.invokeLater(new Runnable(){
+                @Override
                 public void run(){
-                    Battleship.mainFrame = new MainFrame();
-                    Battleship.mainFrame.setVisible(true);
+                    Battleship.MainFrame = new MainFrame();
+                    Battleship.MainFrame.setVisible(true);
                 }
         });
-        
         }
         
         catch (Throwable e){
@@ -49,8 +51,8 @@ public class Battleship implements Serializable{
             ErrorType.displayErrorMsg(e.getStackTrace().toString());
         }
             finally{
-            if(Battleship.mainFrame != null){
-                Battleship.mainFrame.dispose();
+            if(Battleship.MainFrame != null){
+                Battleship.MainFrame.dispose();
             }
         }
         
@@ -93,6 +95,7 @@ public class Battleship implements Serializable{
         //duplicate instance created
         //MainMenuView mainMenu = new MainMenuView();
         //mainMenu.getInput();
+        
     }
 
     public Battleship() {
