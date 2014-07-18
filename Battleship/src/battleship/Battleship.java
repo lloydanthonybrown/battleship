@@ -38,21 +38,21 @@ public class Battleship implements Serializable{
         try{
             battleship = new Battleship();
             java.awt.EventQueue.invokeLater(new Runnable(){
+                @Override
                 public void run(){
-                    Battleship.mainFrame = new MainFrame();
-                    Battleship.mainFrame.setVisible(true);
+                    Battleship.MainFrame = new MainFrame();
+                    Battleship.MainFrame.setVisible(true);
                 }
         });
-        
         }
         
-        catch (Throwable ex){
-            ErrorType.displayErrorMsg("Error, bro. " + ex.getMessage());
-            ErrorType.displayErrorMsg(ex.getStackTrace().toString());
+        catch (Throwable e){
+            ErrorType.displayErrorMsg("Error, bro. " + e.getMessage());
+            ErrorType.displayErrorMsg(e.getStackTrace().toString());
         }
             finally{
-            if(Battleship.mainFrame != null){
-                Battleship.mainFrame.dispose();
+            if(Battleship.MainFrame != null){
+                Battleship.MainFrame.dispose();
             }
         }
         
@@ -95,6 +95,7 @@ public class Battleship implements Serializable{
         //duplicate instance created
         //MainMenuView mainMenu = new MainMenuView();
         //mainMenu.getInput();
+        
     }
 
     public Battleship() {
