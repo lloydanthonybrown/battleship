@@ -35,14 +35,14 @@ public class Battleship implements Serializable{
             
     public static void main(String[] args) {
        Battleship battleship = null;
-		        try{
-		            battleship = new Battleship();
-		            java.awt.EventQueue.invokeLater(new Runnable(){
-		                @Override
-		                public void run(){
-		                    battleship.Frame.mainFrame = new MainFrame();
-		                    battleship.mainFrame.setVisible(true);
-		                }
+	try{
+	 battleship = new Battleship();
+	 java.awt.EventQueue.invokeLater(new Runnable(){
+	 @Override
+             public void run(){
+                     battleship.Frames.mainFrame = new MainFrame();
+                        battleship.mainFrame.setVisible(true);
+                            }
 		        });
 		        }
 		        
