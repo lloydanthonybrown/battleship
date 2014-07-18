@@ -10,10 +10,6 @@ public class Battleship implements Serializable{
     
   public static MainFrame mainFrame = null;
     
-    
-    
-    
-    
     private static final Scanner inFile = new Scanner(System.in);
     private String name;
     private String instructions = "The game of Battleship \n\n"
@@ -55,8 +51,6 @@ public class Battleship implements Serializable{
 		                battleship.mainFrame.dispose();
 		            }
 		        }	}
-
-        
         
         Battleship myGame = new Battleship();
         myGame.getName();
@@ -140,7 +134,4 @@ public class Battleship implements Serializable{
     public void setInstructions(String instructions) {
         this.instructions = instructions;
     }
-
-    
-    
 }
