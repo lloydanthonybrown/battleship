@@ -34,27 +34,28 @@ public class Battleship implements Serializable{
     }
             
     public static void main(String[] args) {
-        Battleship battleship = null;
-        try{
-            battleship = new Battleship();
-            java.awt.EventQueue.invokeLater(new Runnable(){
-                @Override
-                public void run(){
-                    Battleship.MainFrame = new MainFrame();
-                    Battleship.MainFrame.setVisible(true);
-                }
-        });
-        }
-        
-        catch (Throwable e){
-            ErrorType.displayErrorMsg("Error, bro. " + e.getMessage());
-            ErrorType.displayErrorMsg(e.getStackTrace().toString());
-        }
-            finally{
-            if(Battleship.MainFrame != null){
-                Battleship.MainFrame.dispose();
-            }
-        }
+       Battleship battleship = null;
+	try{
+	 battleship = new Battleship();
+	 java.awt.EventQueue.invokeLater(new Runnable(){
+	 @Override
+             public void run(){
+                     battleship.Frames.mainFrame = new MainFrame();
+                        battleship.mainFrame.setVisible(true);
+                            }
+		        });
+		        }
+		        
+		        catch (Throwable e){
+		            ErrorType.displayErrorMsg("Error, bro. " + e.getMessage());
+		            ErrorType.displayErrorMsg(e.getStackTrace().toString());
+		        }
+		            finally{
+		            if(battleship.mainFrame != null){
+		                battleship.mainFrame.dispose();
+		            }
+		        }	}
+
         
         
         Battleship myGame = new Battleship();
