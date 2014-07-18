@@ -86,14 +86,39 @@ public class MainFrame extends javax.swing.JFrame {
         jpMenuItems.setForeground(new java.awt.Color(0, 51, 153));
 
         Main.setText("Main Menu");
+        Main.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainActionPerformed(evt);
+            }
+        });
 
         optionButton.setText("Options");
+        optionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                optionButtonActionPerformed(evt);
+            }
+        });
 
         playerButton.setText("Players");
+        playerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerButtonActionPerformed(evt);
+            }
+        });
 
         statsButton.setText("Statistics");
+        statsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statsButtonActionPerformed(evt);
+            }
+        });
 
         helpButton.setText("Help");
+        helpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -182,6 +207,31 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
+        HelpFrame helpFrame = new HelpFrame();
+        helpFrame.setVisible(true);
+    }//GEN-LAST:event_helpButtonActionPerformed
+
+    private void statsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statsButtonActionPerformed
+        StatsFrame statsFrame = new StatsFrame();
+        statsFrame.setVisible(true);
+    }//GEN-LAST:event_statsButtonActionPerformed
+
+    private void optionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optionButtonActionPerformed
+        OptionsFrame optionsFrame = new OptionsFrame();
+        optionsFrame.setVisible(true);
+    }//GEN-LAST:event_optionButtonActionPerformed
+
+    private void MainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainActionPerformed
+        MainMenuFrame mainMenuFrame = new MainMenuFrame();
+        mainMenuFrame.setVisible(true);
+    }//GEN-LAST:event_MainActionPerformed
+
+    private void playerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerButtonActionPerformed
+        PlayerFrame playerFrame = new PlayerFrame();
+        playerFrame.setVisible.(true);
+    }//GEN-LAST:event_playerButtonActionPerformed
 
     /**
      * @param args the command line arguments
