@@ -1,7 +1,9 @@
 package battleship;
+import battleship.Frames.MainFrame;
 import battleship.menu.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
+import javax.lang.model.type.ErrorType;
 
 public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
@@ -44,9 +46,9 @@ public class Battleship implements Serializable{
         
         }
         
-        catch (Throwable e){
-            ErrorType.displayErrorMsg("Error, bro. " + e.getMessage());
-            ErrorType.displayErrorMsg(e.getStackTrace().toString());
+        catch (Throwable ex){
+            ErrorType.displayErrorMsg("Error, bro. " + ex.getMessage());
+            ErrorType.displayErrorMsg(ex.getStackTrace().toString());
         }
             finally{
             if(Battleship.mainFrame != null){
