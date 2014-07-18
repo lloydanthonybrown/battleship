@@ -41,6 +41,7 @@ public class MainFrame extends javax.swing.JFrame {
         playerButton = new javax.swing.JButton();
         statsButton = new javax.swing.JButton();
         helpButton = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtWelcome = new javax.swing.JTextArea();
 
@@ -123,24 +124,21 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        exit.setText("Выход");
+
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
         jpMenuItemsLayout.setHorizontalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Main)
-                    .addGroup(jpMenuItemsLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(statsButton)
-                            .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(playerButton)
-                                .addComponent(optionButton))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpMenuItemsLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(helpButton)))))
+                .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(optionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(playerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Main))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
@@ -156,7 +154,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(statsButton)
                 .addGap(18, 18, 18)
                 .addComponent(helpButton)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(exit)
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         jtWelcome.setEditable(false);
@@ -243,6 +243,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Main;
+    private javax.swing.JButton exit;
     private javax.swing.JButton helpButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
