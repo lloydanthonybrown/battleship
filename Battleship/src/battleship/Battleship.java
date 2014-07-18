@@ -8,7 +8,7 @@ import javax.lang.model.type.ErrorType;
 public class Battleship implements Serializable{
 // authors Lloyd Brown, Christopher Carroll, Rubin Gonzalez, and KamiAnne Dastrup
     
-  
+  public static MainFrame mainFrame = null;
     
     
     
@@ -40,8 +40,8 @@ public class Battleship implements Serializable{
 	 java.awt.EventQueue.invokeLater(new Runnable(){
 	 @Override
              public void run(){
-                     battleship.Frames.mainFrame = new MainFrame();
-                        battleship.mainFrame.setVisible(true);
+                     Battleship.mainFrame = new MainFrame();
+                        Battleship.mainFrame.setVisible(true);
                             }
 		        });
 		        }
