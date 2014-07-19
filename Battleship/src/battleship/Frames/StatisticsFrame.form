@@ -92,7 +92,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="showStats" min="-2" pref="162" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jScrollPane1" pref="246" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -110,7 +110,7 @@
                       <Component id="jlTitle" min="-2" pref="49" max="-2" attributes="0"/>
                       <EmptySpace pref="17" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="showStats" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                       </Group>
@@ -131,7 +131,7 @@
                 <Property name="text" type="java.lang.String" value="Statistics"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="showStats">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Show my Stats"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -141,6 +141,9 @@
                   <Dimension value="[162, 29]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showStatsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>

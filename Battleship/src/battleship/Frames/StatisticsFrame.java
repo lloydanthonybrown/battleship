@@ -1,4 +1,5 @@
 package battleship.Frames;
+
 import battleship.menu.views.StatsMenuView;
 
 /* @author lloydab
@@ -15,7 +16,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
     }
     
     // The displayStatsText() won't work just yet
-    /* private void displayStatsText(StatsType command) {
+  /*  private void displayStatsText(StatsType command) {
         try {
             String statsText = this.statsCommands.getStatsText(command);
             this.jtStatsText.setText(statsText);
@@ -23,8 +24,8 @@ public class StatisticsFrame extends javax.swing.JFrame {
             this.jtStatsText.setText(ex.getMessage());
         }
         
-    } */
-    
+    } 
+    */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -32,7 +33,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
         jpBody = new javax.swing.JPanel();
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        showStats = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -50,9 +51,14 @@ public class StatisticsFrame extends javax.swing.JFrame {
         jlTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlTitle.setText("Statistics");
 
-        jButton1.setText("Show my Stats");
-        jButton1.setMaximumSize(new java.awt.Dimension(162, 29));
-        jButton1.setMinimumSize(new java.awt.Dimension(162, 29));
+        showStats.setText("Show my Stats");
+        showStats.setMaximumSize(new java.awt.Dimension(162, 29));
+        showStats.setMinimumSize(new java.awt.Dimension(162, 29));
+        showStats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showStatsActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Show Stats History");
 
@@ -70,7 +76,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
                         .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(jpTitleLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(showStats, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
@@ -84,7 +90,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
                 .addComponent(jlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(showStats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
@@ -139,49 +145,26 @@ public class StatisticsFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_MainActionPerformed
 
+    private void showStatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showStatsActionPerformed
+        ShowMyStatsFrame showMyStats = new ShowMyStatsFrame();
+        showMyStats.setVisible(true);
+        
+        
+    }//GEN-LAST:event_showStatsActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new StatisticsFrame().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Main;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;
+    private javax.swing.JButton showStats;
     // End of variables declaration//GEN-END:variables
 }
