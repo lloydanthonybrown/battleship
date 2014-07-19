@@ -72,6 +72,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="exitPlayerButton" min="-2" max="-2" attributes="0"/>
                       <Component id="playerEnterButton" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="playerOneName" max="32767" attributes="0"/>
@@ -99,7 +100,9 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="playerEnterButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="61" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="exitPlayerButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -145,6 +148,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Engage!"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="exitPlayerButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Exit"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitPlayerButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
