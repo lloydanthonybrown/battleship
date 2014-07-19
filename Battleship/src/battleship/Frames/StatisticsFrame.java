@@ -46,7 +46,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
         jlTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlTitle.setText("Statistics");
 
-        Main.setText("Main Menu");
+        Main.setText("Back");
         Main.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MainActionPerformed(evt);
