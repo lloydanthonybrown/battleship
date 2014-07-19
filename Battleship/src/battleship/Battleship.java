@@ -43,14 +43,14 @@ public class Battleship implements Serializable{
 		        }
 		        
 		        catch (Throwable e){
-		            ErrorType.displayErrorMsg("Error, bro. " + e.getMessage());
-		            ErrorType.displayErrorMsg(e.getStackTrace().toString());
+		            //ErrorType.displayErrorMsg("Error, bro. " + e.getMessage());
+		            //ErrorType.displayErrorMsg(e.getStackTrace().toString());
 		        }
 		            finally{
 		            if(battleship.mainFrame != null){
 		                battleship.mainFrame.dispose();
 		            }
-		        }	}
+		        }	
         
         Battleship myGame = new Battleship();
         myGame.getName();
@@ -77,6 +77,7 @@ public class Battleship implements Serializable{
                 Battleship.inFile.close();
             }
     }
+}
         
        //call function from UserHelp
         /* int wins = 8;
@@ -91,7 +92,7 @@ public class Battleship implements Serializable{
         //MainMenuView mainMenu = new MainMenuView();
         //mainMenu.getInput();
         
-    }
+    
 
     public Battleship() {
     }
