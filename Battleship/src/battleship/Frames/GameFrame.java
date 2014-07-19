@@ -6,6 +6,10 @@
 
 package battleship.Frames;
 
+import java.awt.Color;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+
 /**
  *
  * @author Kam Kam
@@ -117,6 +121,11 @@ public class GameFrame extends javax.swing.JFrame {
         });
         jtBoard1.setIntercellSpacing(new java.awt.Dimension(5, 5));
         jtBoard1.setRowHeight(30);
+        jtBoard1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cellClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jtBoard1);
 
         jtBoard2.setBackground(new java.awt.Color(0, 153, 255));
@@ -251,6 +260,22 @@ public class GameFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jbBoardQuitActionPerformed
 
+    private void cellClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cellClicked
+        JTable jTable = (JTable) evt.getComponent();
+        this.jtBoard1.setBackground(Color.red);
+    }//GEN-LAST:event_cellClicked
+
+    //need cellRenderer to make individual cells change color
+    private class CellRenderer extends DefaultTableCellRenderer {
+
+        public CellRenderer() {
+            super();
+        }
+
+        public void cellClicked() {
+            
+        }
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
