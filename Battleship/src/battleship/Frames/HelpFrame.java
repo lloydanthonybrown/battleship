@@ -32,6 +32,7 @@ public class HelpFrame extends javax.swing.JFrame {
         jpBody = new javax.swing.JPanel();
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
+        Main = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Battleship");
@@ -46,13 +47,24 @@ public class HelpFrame extends javax.swing.JFrame {
         jlTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlTitle.setText("Help Menu");
 
+        Main.setText("Main Menu");
+        Main.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
         jpTitleLayout.setHorizontalGroup(
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTitleLayout.createSequentialGroup()
+            .addGroup(jpTitleLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+                .addGroup(jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+                    .addGroup(jpTitleLayout.createSequentialGroup()
+                        .addComponent(Main)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jpTitleLayout.setVerticalGroup(
@@ -60,7 +72,8 @@ public class HelpFrame extends javax.swing.JFrame {
             .addGroup(jpTitleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(Main))
         );
 
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
@@ -89,6 +102,11 @@ public class HelpFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainActionPerformed
+        MainMenuFrame mainMenuFrame = new MainMenuFrame();
+        mainMenuFrame.setVisible(true);
+    }//GEN-LAST:event_MainActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +144,7 @@ public class HelpFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Main;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;
