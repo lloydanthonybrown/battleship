@@ -8,6 +8,7 @@ package battleship.Frames;
 
 import java.awt.Color;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
@@ -264,6 +265,17 @@ public class GameFrame extends javax.swing.JFrame {
         this.jtBoard1.setBackground(Color.red);
     }//GEN-LAST:event_cellClicked
 
+    //need cellRenderer to make individual cells change color
+    private class CellRenderer extends DefaultTableCellRenderer {
+
+        public CellRenderer() {
+            super();
+        }
+
+        public void cellClicked() {
+            
+        }
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
