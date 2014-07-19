@@ -14,7 +14,8 @@ public class HelpFrame extends javax.swing.JFrame {
         return helpCommands;
     }
 
-    private void displayHelpText(HelpType command) {
+    // The displayHelpText() won't work just yet
+    /* private void displayHelpText(HelpType command) {
         try {
             String helpText = this.helpCommands.getHelpText(command);
             this.jtHelpText.setText(helpText);
@@ -22,7 +23,8 @@ public class HelpFrame extends javax.swing.JFrame {
             this.jtHelpText.setText(ex.getMessage());
         }
         
-    }
+    } */
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
