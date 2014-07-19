@@ -55,6 +55,11 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         jLabel3.setText("Player Name");
 
         playerEnterButton.setText("Engage!");
+        playerEnterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerEnterButtonActionPerformed(evt);
+            }
+        });
 
         exitPlayerButton.setText("Exit");
         exitPlayerButton.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +136,11 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_exitPlayerButtonActionPerformed
+
+    private void playerEnterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerEnterButtonActionPerformed
+        GameFrame gameFrame = new GameFrame();
+        gameFrame.setVisible(true);
+    }//GEN-LAST:event_playerEnterButtonActionPerformed
 
     /**
      * @param args the command line arguments
