@@ -33,6 +33,15 @@ public class HelpFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
         Main = new javax.swing.JButton();
+        locationsbutton = new javax.swing.JButton();
+        instructionbutton = new javax.swing.JButton();
+        compplayerbutton = new javax.swing.JButton();
+        objectivesbutton = new javax.swing.JButton();
+        markerbutton = new javax.swing.JButton();
+        playersbutton = new javax.swing.JButton();
+        quithelpbutton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtHelpMenu = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Battleship");
@@ -54,6 +63,8 @@ public class HelpFrame extends javax.swing.JFrame {
             }
         });
 
+        locationsbutton.setText("Locations");
+
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
         jpTitleLayout.setHorizontalGroup(
@@ -64,7 +75,8 @@ public class HelpFrame extends javax.swing.JFrame {
                     .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
                     .addGroup(jpTitleLayout.createSequentialGroup()
                         .addComponent(Main)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(locationsbutton)))
                 .addContainerGap())
         );
         jpTitleLayout.setVerticalGroup(
@@ -73,20 +85,75 @@ public class HelpFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(Main))
+                .addGroup(jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Main)
+                    .addComponent(locationsbutton)))
         );
+
+        instructionbutton.setText("Instructions");
+
+        compplayerbutton.setText("Computer");
+
+        objectivesbutton.setText("Objectives");
+
+        markerbutton.setText("Marker");
+
+        playersbutton.setText("Players");
+
+        quithelpbutton.setText("Quit Help");
+
+        jtHelpMenu.setEditable(false);
+        jtHelpMenu.setColumns(20);
+        jtHelpMenu.setLineWrap(true);
+        jtHelpMenu.setRows(5);
+        jtHelpMenu.setText("Select an option from the menu...");
+        jtHelpMenu.setWrapStyleWord(true);
+        jtHelpMenu.setMargin(new java.awt.Insets(5, 5, 5, 5));
+        jScrollPane1.setViewportView(jtHelpMenu);
 
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
         jpBodyLayout.setHorizontalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jpTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jpBodyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(instructionbutton)
+                    .addComponent(objectivesbutton)
+                    .addComponent(compplayerbutton))
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(markerbutton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(quithelpbutton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(playersbutton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 198, Short.MAX_VALUE))
+                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpBodyLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(instructionbutton)
+                            .addComponent(markerbutton))
+                        .addGap(18, 18, 18)
+                        .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(compplayerbutton)
+                            .addComponent(playersbutton))
+                        .addGap(18, 18, 18)
+                        .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(objectivesbutton)
+                            .addComponent(quithelpbutton))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBodyLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,42 +178,21 @@ public class HelpFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HelpFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HelpFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HelpFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HelpFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HelpFrame().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Main;
+    private javax.swing.JButton compplayerbutton;
+    private javax.swing.JButton instructionbutton;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;
+    private javax.swing.JTextArea jtHelpMenu;
+    private javax.swing.JButton locationsbutton;
+    private javax.swing.JButton markerbutton;
+    private javax.swing.JButton objectivesbutton;
+    private javax.swing.JButton playersbutton;
+    private javax.swing.JButton quithelpbutton;
     // End of variables declaration//GEN-END:variables
 }
