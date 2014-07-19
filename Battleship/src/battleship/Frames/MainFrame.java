@@ -62,7 +62,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jpTitle.setBackground(new java.awt.Color(0, 51, 204));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("PT Sans", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Battleship");
 
@@ -191,7 +191,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 67, Short.MAX_VALUE))
+                .addGap(0, 62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -230,10 +230,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_optionButtonActionPerformed
 
     private void playGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playGameButtonActionPerformed
-        
         MainFrame mainFrame = new MainFrame();
         EnterPlayerNames enterPlayerFrame = new EnterPlayerNames();
-        
         enterPlayerFrame.setVisible(true);
     }//GEN-LAST:event_playGameButtonActionPerformed
 
