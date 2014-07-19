@@ -1,14 +1,28 @@
 package battleship.Frames;
 
+import battleship.menu.controls.MainMenuControl;
+
 /* @author ckcarroll
  */
 public class MainFrame extends javax.swing.JFrame {
+    
+    private MainMenuControl mainCommands = new MainMenuControl();
+    
     public void mainFrame(){
         
     }
 
     public MainFrame() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    
+    public MainMenuControl getMainCommands(){
+        return mainCommands;
+    }
+    
+    public void setMainCommands (MainMenuControl mainCommands){
+        this.mainCommands = mainCommands;
     }
 
     @SuppressWarnings("unchecked")
@@ -216,8 +230,11 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_optionButtonActionPerformed
 
     private void playGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playGameButtonActionPerformed
+        //Game game = this.mainCommands.create(GameType.ONE_PLAYER);
         MainFrame mainFrame = new MainFrame();
-        mainFrame.setVisible(true);
+        EnterPlayerNames enterPlayerFrame = new EnterPlayerNames();
+        //enterPlayerFrame.initializeForm();
+        enterPlayerFrame.setVisible(true);
     }//GEN-LAST:event_playGameButtonActionPerformed
 
     private void playerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerButtonActionPerformed
