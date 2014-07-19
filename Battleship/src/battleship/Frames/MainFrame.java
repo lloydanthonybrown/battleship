@@ -122,7 +122,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        exit.setText("Выход");
+        exit.setText("Quit Game");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitActionPerformed(evt);
@@ -241,12 +241,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_playerButtonActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
-        this.dispose();
+        
+        System.exit(WIDTH);
     }//GEN-LAST:event_exitActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
