@@ -201,7 +201,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_helpButtonActionPerformed
 
     private void statsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statsButtonActionPerformed
-        StatsFrame statsFrame = new StatsFrame();
+        StatisticsFrame statsFrame = new StatisticsFrame();
         statsFrame.setVisible(true);
     }//GEN-LAST:event_statsButtonActionPerformed
 
@@ -211,13 +211,13 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_optionButtonActionPerformed
 
     private void MainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainActionPerformed
-        MainMenuFrame mainMenuFrame = new MainMenuFrame();
-        mainMenuFrame.setVisible(true);
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.setVisible(true);
     }//GEN-LAST:event_MainActionPerformed
 
     private void playerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerButtonActionPerformed
-        PlayerFrame playerFrame = new PlayerFrame();
-        playerFrame.setVisible.(true);
+        EnterPlayerNames playerFrame = new EnterPlayerNames();
+        playerFrame.setVisible(true);
     }//GEN-LAST:event_playerButtonActionPerformed
 
     /**

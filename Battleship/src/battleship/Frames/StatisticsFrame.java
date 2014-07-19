@@ -103,8 +103,8 @@ public class StatisticsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainActionPerformed
-        MainMenuFrame mainMenuFrame = new MainMenuFrame();
-        mainMenuFrame.setVisible(true);
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.setVisible(true);
     }//GEN-LAST:event_MainActionPerformed
 
     /**
