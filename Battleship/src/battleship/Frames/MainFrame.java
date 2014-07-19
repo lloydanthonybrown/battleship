@@ -109,6 +109,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         exit.setText("Выход");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -219,6 +224,10 @@ public class MainFrame extends javax.swing.JFrame {
         EnterPlayerNames playerFrame = new EnterPlayerNames();
         playerFrame.setVisible(true);
     }//GEN-LAST:event_playerButtonActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line arguments

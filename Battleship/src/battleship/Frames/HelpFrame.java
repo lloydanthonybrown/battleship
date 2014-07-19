@@ -15,15 +15,15 @@ public class HelpFrame extends javax.swing.JFrame {
     }
 
     // The displayHelpText() won't work just yet
-    /* private void displayHelpText(HelpType command) {
-        try {
-            String helpText = this.helpCommands.getHelpText(command);
-            this.jtHelpText.setText(helpText);
-        } catch (TicTacToeException ex) {
-            this.jtHelpText.setText(ex.getMessage());
-        }
+     private void displayHelpText(String helptype) {
+        /*try {
+            String helpText = this.helpCommands.getInput(command);
+            this.jtHelpMenu.setText(helpText);
+        } catch (BattleshipException ex) {
+            this.jtHelpMenu.setText(ex.getMessage());
+        }*/
         
-    } */
+    } 
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -64,6 +64,11 @@ public class HelpFrame extends javax.swing.JFrame {
         });
 
         locationsbutton.setText("Locations");
+        locationsbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationsbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
@@ -91,16 +96,46 @@ public class HelpFrame extends javax.swing.JFrame {
         );
 
         instructionbutton.setText("Instructions");
+        instructionbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                instructionbuttonActionPerformed(evt);
+            }
+        });
 
         compplayerbutton.setText("Computer");
+        compplayerbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                compplayerbuttonActionPerformed(evt);
+            }
+        });
 
         objectivesbutton.setText("Objectives");
+        objectivesbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                objectivesbuttonActionPerformed(evt);
+            }
+        });
 
         markerbutton.setText("Marker");
+        markerbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                markerbuttonActionPerformed(evt);
+            }
+        });
 
         playersbutton.setText("Players");
+        playersbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playersbuttonActionPerformed(evt);
+            }
+        });
 
         quithelpbutton.setText("Quit Help");
+        quithelpbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quithelpbuttonActionPerformed(evt);
+            }
+        });
 
         jtHelpMenu.setEditable(false);
         jtHelpMenu.setColumns(20);
@@ -174,6 +209,34 @@ public class HelpFrame extends javax.swing.JFrame {
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
     }//GEN-LAST:event_MainActionPerformed
+
+    private void instructionbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instructionbuttonActionPerformed
+        displayHelpText(HelpMenuView.INSTRUCTIONS);
+    }//GEN-LAST:event_instructionbuttonActionPerformed
+
+    private void compplayerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compplayerbuttonActionPerformed
+        displayHelpText(HelpMenuView.COMPUTER_PLAYER);
+    }//GEN-LAST:event_compplayerbuttonActionPerformed
+
+    private void objectivesbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_objectivesbuttonActionPerformed
+        displayHelpText(HelpMenuView.GAME_OBJECTIVES);
+    }//GEN-LAST:event_objectivesbuttonActionPerformed
+
+    private void locationsbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationsbuttonActionPerformed
+        displayHelpText(HelpMenuView.LOCATION);
+    }//GEN-LAST:event_locationsbuttonActionPerformed
+
+    private void markerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_markerbuttonActionPerformed
+        displayHelpText(HelpMenuView.MARKER);
+    }//GEN-LAST:event_markerbuttonActionPerformed
+
+    private void playersbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playersbuttonActionPerformed
+        displayHelpText(HelpMenuView.PEOPLE_PLAYER);
+    }//GEN-LAST:event_playersbuttonActionPerformed
+
+    private void quithelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quithelpbuttonActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_quithelpbuttonActionPerformed
 
     /**
      * @param args the command line arguments
