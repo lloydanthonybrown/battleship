@@ -20,7 +20,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jpMenuItems = new javax.swing.JPanel();
-        Main = new javax.swing.JButton();
+        playGameButton = new javax.swing.JButton();
         optionButton = new javax.swing.JButton();
         playerButton = new javax.swing.JButton();
         statsButton = new javax.swing.JButton();
@@ -73,10 +73,10 @@ public class MainFrame extends javax.swing.JFrame {
         jpMenuItems.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jpMenuItems.setForeground(new java.awt.Color(0, 51, 153));
 
-        Main.setText("Main Menu");
-        Main.addActionListener(new java.awt.event.ActionListener() {
+        playGameButton.setText("Play Game");
+        playGameButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MainActionPerformed(evt);
+                playGameButtonActionPerformed(evt);
             }
         });
 
@@ -127,14 +127,14 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(statsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Main))
+                    .addComponent(playGameButton))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(Main)
+                .addComponent(playGameButton)
                 .addGap(18, 18, 18)
                 .addComponent(optionButton)
                 .addGap(18, 18, 18)
@@ -167,7 +167,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,10 +215,10 @@ public class MainFrame extends javax.swing.JFrame {
         optionsFrame.setVisible(true);
     }//GEN-LAST:event_optionButtonActionPerformed
 
-    private void MainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainActionPerformed
+    private void playGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playGameButtonActionPerformed
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
-    }//GEN-LAST:event_MainActionPerformed
+    }//GEN-LAST:event_playGameButtonActionPerformed
 
     private void playerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerButtonActionPerformed
         EnterPlayerNames playerFrame = new EnterPlayerNames();
@@ -235,7 +235,6 @@ public class MainFrame extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Main;
     private javax.swing.JButton exit;
     private javax.swing.JButton helpButton;
     private javax.swing.JLabel jLabel1;
@@ -246,6 +245,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jpTitle;
     private javax.swing.JTextArea jtWelcome;
     private javax.swing.JButton optionButton;
+    private javax.swing.JButton playGameButton;
     private javax.swing.JButton playerButton;
     private javax.swing.JButton statsButton;
     // End of variables declaration//GEN-END:variables

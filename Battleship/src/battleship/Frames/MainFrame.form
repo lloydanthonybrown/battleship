@@ -82,7 +82,7 @@
                   <Component id="jpMenuItems" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="636" max="-2" attributes="0"/>
-                  <EmptySpace pref="56" max="32767" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -170,7 +170,7 @@
                           <Component id="statsButton" min="-2" pref="110" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" pref="110" max="-2" attributes="0"/>
                           <Component id="exit" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="Main" min="-2" max="-2" attributes="0"/>
+                          <Component id="playGameButton" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="83" max="32767" attributes="0"/>
                   </Group>
@@ -180,7 +180,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="Main" min="-2" max="-2" attributes="0"/>
+                      <Component id="playGameButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="optionButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -197,12 +197,12 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="Main">
+            <Component class="javax.swing.JButton" name="playGameButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Main Menu"/>
+                <Property name="text" type="java.lang.String" value="Play Game"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MainActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="playGameButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="optionButton">
