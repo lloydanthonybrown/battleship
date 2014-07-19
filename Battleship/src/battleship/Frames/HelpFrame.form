@@ -50,13 +50,54 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jpTitle" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="instructionbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="objectivesbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="compplayerbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="markerbutton" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="quithelpbutton" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="playersbutton" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jpTitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="198" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="instructionbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="markerbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="compplayerbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="playersbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="objectivesbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="quithelpbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="193" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -78,7 +119,8 @@
                           <Component id="jlTitle" pref="378" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="Main" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="locationsbutton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -91,7 +133,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jlTitle" min="-2" pref="49" max="-2" attributes="0"/>
                       <EmptySpace pref="17" max="32767" attributes="0"/>
-                      <Component id="Main" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Main" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="locationsbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -116,6 +161,63 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MainActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="locationsbutton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Locations"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="instructionbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Instructions"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="compplayerbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Computer"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="objectivesbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Objectives"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="markerbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Marker"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="playersbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Players"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="quithelpbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quit Help"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jtHelpMenu">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="lineWrap" type="boolean" value="true"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Select an option from the menu..."/>
+                <Property name="wrapStyleWord" type="boolean" value="true"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[5, 5, 5, 5]"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
