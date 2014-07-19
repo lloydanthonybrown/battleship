@@ -230,10 +230,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_optionButtonActionPerformed
 
     private void playGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playGameButtonActionPerformed
-        //Game game = this.mainCommands.create(GameType.ONE_PLAYER);
+        
         MainFrame mainFrame = new MainFrame();
         EnterPlayerNames enterPlayerFrame = new EnterPlayerNames();
-        //enterPlayerFrame.initializeForm();
+        
         enterPlayerFrame.setVisible(true);
     }//GEN-LAST:event_playGameButtonActionPerformed
 
