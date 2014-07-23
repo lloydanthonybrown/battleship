@@ -34,7 +34,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
         showStats = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        showHistory = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         Main = new javax.swing.JButton();
@@ -60,7 +60,12 @@ public class StatisticsFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Show Stats History");
+        showHistory.setText("Show Stats History");
+        showHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showHistoryActionPerformed(evt);
+            }
+        });
 
         jTextPane1.setText("Select one of the buttons to see your statistics from this game or previous, or click back to exit.");
         jScrollPane1.setViewportView(jTextPane1);
@@ -80,7 +85,7 @@ public class StatisticsFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(showHistory)
                         .addGap(49, 49, 49))))
         );
         jpTitleLayout.setVerticalGroup(
@@ -89,10 +94,11 @@ public class StatisticsFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addGroup(jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(showStats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(showStats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(showHistory))))
         );
 
         Main.setText("Back");
@@ -152,6 +158,12 @@ public class StatisticsFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_showStatsActionPerformed
 
+    private void showHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showHistoryActionPerformed
+        ShowMyHistory history = new ShowMyHistory();
+        history.setVisible(true);
+        
+    }//GEN-LAST:event_showHistoryActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -159,12 +171,12 @@ public class StatisticsFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Main;
-    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;
+    private javax.swing.JButton showHistory;
     private javax.swing.JButton showStats;
     // End of variables declaration//GEN-END:variables
 }
