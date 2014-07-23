@@ -211,7 +211,8 @@ public class HelpFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_MainActionPerformed
 
     private void instructionbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instructionbuttonActionPerformed
-        displayHelpText(HelpMenuView.INSTRUCTIONS);
+        jtHelpMenu.setText("Welcome to Battleship");
+       // displayHelpText(HelpMenuView.INSTRUCTIONS);
     }//GEN-LAST:event_instructionbuttonActionPerformed
 
     private void compplayerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compplayerbuttonActionPerformed
